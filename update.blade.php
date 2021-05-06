@@ -22,12 +22,12 @@
             <div class="form-group">
                 @csrf
                 @method('PATCH')
-                <label for="job-number">Job Number:</label>
-                <input type="number" class="form-control" name="job-number" value="{{ $job->job_number }}" />
+                <label for="job_number">Job Number:</label>
+                <input type="number" class="form-control" name="job_number" value="{{ $job->job_number }}" />
             </div>
             <div class="form-group">
-                <label for="job-type">Job Type:</label>
-                <input type="text" class="form-control" name="job-type" value="{{ $job->job_type }}" />
+                <label for="job_type">Job Type:</label>
+                <input type="text" class="form-control" name="job_type" value="{{ $job->job_type }}" />
             </div>
             <div class="form-group">
                 <label for="modality">Phone</label>

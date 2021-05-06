@@ -37,8 +37,8 @@ class JobController extends Controller
     public function store(Request $request)
     {
         $storeData = $request->validate([
-            'job-number' => 'required|numeric',
-            'job-type' => 'required|string|max:255',
+            'job_number' => 'required|numeric|max:5',
+            'job_type' => 'required|string|max:255',
             'modality' => 'required|string|max:255'
         ]);
         $job = Job::create($storeData);
@@ -80,8 +80,8 @@ class JobController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->validate([
-            'job-number' => 'required|numeric',
-            'job-type' => 'required|max:255',
+            'job_number' => 'required|numeric',
+            'job_type' => 'required|max:255',
             'modality' => 'required|max:255',
         ]);
 

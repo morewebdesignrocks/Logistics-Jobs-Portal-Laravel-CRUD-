@@ -20,12 +20,12 @@
       <form method="post" action="{{ route('jobs.store') }}">
           <div class="form-group">
               @csrf
-              <label for="job-number">Job #:</label>
-              <input type="number" class="form-control" name="job-number"/>
+              <label for="job_number">Job #:</label>
+              <input type="number" class="form-control" name="job_number"/>
           </div>
           <div class="form-group">
-              <label for="job-type">Job Type</label>
-              <input type="text" class="form-control" name="job-type"/>
+              <label for="job_type">Job Type</label>
+              <input type="text" class="form-control" name="job_type"/>
           </div>
           <div class="form-group">
               <label for="modality">Modality</label>
