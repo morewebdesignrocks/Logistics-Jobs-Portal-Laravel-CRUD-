@@ -30,8 +30,16 @@
                 <input type="text" class="form-control" name="job_type" value="{{ $job->job_type }}" />
             </div>
             <div class="form-group">
-                <label for="modality">Phone</label>
+                <label for="modality">Modality:</label>
                 <input type="text" class="form-control" name="modality" value="{{ $job->modality }}" />
+            </div>
+            <div class="form-group">
+                <label for="equipment_manufacturer">Manufacturer:</label>
+                <input type="text" class="form-control" name="equipment_manufacturer" value="{{ $job->equipment_manufacturer }}" />
+            </div>
+            <div class="form-group">
+                <label for="equipment_model">Model Number:</label>
+                <input type="text" class="form-control" name="equipment_model" value="{{ $job->equipment_model }}" />
             </div>
 
             <button type="submit" class="btn btn-block btn-danger">Update</button>

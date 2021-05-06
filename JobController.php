@@ -7,7 +7,7 @@ use App\Models\Job;
 
 class JobController extends Controller
 {
-/**
+   /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -25,7 +25,7 @@ class JobController extends Controller
      */
     public function create()
     {
-        return view('welcome');
+        return view('create');
     }
 
     /**
@@ -37,9 +37,11 @@ class JobController extends Controller
     public function store(Request $request)
     {
         $storeData = $request->validate([
-            'job_number' => 'required|numeric|max:5',
+            'job_number' => 'required|numeric',
             'job_type' => 'required|string|max:255',
-            'modality' => 'required|string|max:255'
+            'modality' => 'required|string|max:255',
+            'equipment_manufacturer' => 'required|string|max:255',
+            'equipment_model' => 'required|string|max:255'
         ]);
         $job = Job::create($storeData);
 

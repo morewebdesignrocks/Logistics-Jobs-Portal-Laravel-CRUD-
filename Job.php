@@ -11,7 +11,9 @@ class Job extends Model
     protected $fillable = [
         'job_number', 
         'job_type', 
-        'modality'
+        'modality',
+        'equipment_manufacturer',
+        'equipment_model'
     ];
 
 }

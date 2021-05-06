@@ -17,7 +17,9 @@ class CreateJobsTable extends Migration
             $table->id();
             $table->integer('job_number');
             $table->string('job_type');
-            $table->string('modality');            
+            $table->string('modality');
+            $table->string('equipment_manufacturer');
+            $table->string('equipment_model');           
             $table->timestamps();
         });
     }
