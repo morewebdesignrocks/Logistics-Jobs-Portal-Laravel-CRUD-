@@ -17,5 +17,8 @@ use App\Http\Controllers\JobController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/create', function () {
+    return view('create');
+});
 
 Route::resource('jobs', JobController::class);

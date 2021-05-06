@@ -4,9 +4,10 @@
 
 <div class="card mt-5">
   <div class="card-header">
-    Create New Job
+    Search for Job
   </div>
 
+<!--
   <div class="card-body">
     @if ($errors->any())
       <div class="alert alert-danger">
@@ -43,4 +44,5 @@
       </form>
   </div>
 </div>
+-->
 @endsection
