@@ -1,7 +1,6 @@
 @extends('layout')
 
 @section('content')
-
 <div class="card mt-5">
     <div class="card-header">
         Add New Job
@@ -73,16 +72,16 @@
                     <label>Is equipment going to be inspected prior to payment:</label>
                         <div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_1" value="Yes">
+                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_1" value="Yes" onchange="elementShowHide(value, 'gmid_company_inspecting_equipment')">
                                 <label class="form-check-label" for="equipment_requires_inspection_1">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_2" value="No">
+                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_2" value="No" onchange="elementShowHide(value, 'gmid_company_inspecting_equipment')">
                                 <label class="form-check-label" for="equipment_requires_inspection_2">No</label>
                             </div>
                         </div>
                     </div>
-                    <div class="form-group col">
+                    <div id="gmid_company_inspecting_equipment" class="form-group col" style="display: none;">
                         <label for="gmid_company_inspecting_equipment">GMID of company inspecting the equipment:</label>
                         <input type="text" class="form-control" name="gmid_company_inspecting_equipment">
                         </select>
