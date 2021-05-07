@@ -19,7 +19,11 @@ class CreateJobsTable extends Migration
             $table->string('job_type');
             $table->string('modality');
             $table->string('equipment_manufacturer');
-            $table->string('equipment_model');           
+            $table->string('equipment_model'); 
+            $table->string('gmid_company_we_buy_from'); 
+            $table->string('gmid_company_we_sell_to'); 
+            $table->string('equipment_requires_inspection'); 
+            $table->string('gmid_company_inspecting_equipment');           
             $table->timestamps();
         });
     }

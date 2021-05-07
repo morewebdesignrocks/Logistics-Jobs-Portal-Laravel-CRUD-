@@ -13,7 +13,11 @@ class Job extends Model
         'job_type', 
         'modality',
         'equipment_manufacturer',
-        'equipment_model'
+        'equipment_model',
+        'gmid_company_we_buy_from',
+        'gmid_company_we_sell_to',
+        'equipment_requires_inspection',
+        'gmid_company_inspecting_equipment'
     ];
 
 }

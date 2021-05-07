@@ -73,12 +73,12 @@
                     <label>Is equipment going to be inspected prior to payment:</label>
                         <div>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" name="equipment_requires_inspection" value="Yes">
-                                <label for="equipment_requires_inspection">Yes</label>
+                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_1" value="Yes">
+                                <label class="form-check-label" for="equipment_requires_inspection_1">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" name="equipment_requires_inspection" value="No">
-                                <label for="equipment_requires_inspection">No</label>
+                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_2" value="No">
+                                <label class="form-check-label" for="equipment_requires_inspection_2">No</label>
                             </div>
                         </div>
                     </div>

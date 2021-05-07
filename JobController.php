@@ -40,8 +40,12 @@ class JobController extends Controller
             'job_number' => 'required|numeric',
             'job_type' => 'required|string|max:255',
             'modality' => 'required|string|max:255',
-            'equipment_manufacturer' => 'required|string|max:255',
-            'equipment_model' => 'required|string|max:255'
+            'equipment_manufacturer' => 'string|max:255',
+            'equipment_model' => 'string|max:255',
+            'gmid_company_we_buy_from' => 'numeric',
+            'gmid_company_we_sell_to' => 'numeric',
+            'equipment_requires_inspection' => 'string|max:255',
+            'gmid_company_inspecting_equipment' => 'numeric'
         ]);
         $job = Job::create($storeData);
 
