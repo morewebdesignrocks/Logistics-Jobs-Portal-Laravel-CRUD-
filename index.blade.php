@@ -8,32 +8,26 @@
       {{ session()->get('success') }}  
     </div>
   @endif
-  <table class="table">
+  <table class="table table-sm">
     <thead>
-        <tr class="table-primary">
-          <td># ID</td>
-          <td>Job Number:</td>
-          <td>Job Type:</td>
-          <td>Modality:</td>
-          <td>Action</td>
-        </tr>
+      <tr>
+        <td scope="col">Job Number:</td>
+        <td scope="col">Job Type:</td>
+        <td scope="col">Modality:</td>
+        <td scope="col">Action</td>
+      </tr>
     </thead>
     <tbody>
-        @foreach($job as $job)
-        <tr>
-            <td>{{$job->job_number}}</td>
-            <td>{{$job->job_type}}</td>
-            <td>{{$job->modality}}</td>
-            <td class="text-center">
-                <a href="{{ route('jobs.edit', $job->id)}}" class="btn btn-success btn-sm">Edit</a>
-                <form action="{{ route('jobs.destroy', $job->id)}}" method="post" style="display: inline-block">
-                    @csrf
-                    @method('DELETE')
-                    <button class="btn btn-danger btn-sm" type="submit">Delete</button>
-                  </form>
-            </td>
-        </tr>
-        @endforeach
+      @foreach($job as $job)
+      <tr>
+        <th scope="row">{{$job->job_number}}</th>
+        <td>{{$job->job_type}}</td>
+        <td>{{$job->modality}}</td>
+        <td>
+            <a href="{{ route('jobs.edit', $job->id)}}" class="btn btn-success btn-sm">Edit</a>
+        </td>
+      </tr>
+      @endforeach
     </tbody>
   </table>
 <div>
