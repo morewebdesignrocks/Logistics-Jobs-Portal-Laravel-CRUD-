@@ -3,7 +3,7 @@
 @section('content')
 <div class="card mt-5">
     <div class="card-header">
-        Add New Job
+        <h3>Add New Job</h3>
     </div>
 
     <div class="card-body">
@@ -18,7 +18,8 @@
         @endif
         <form method="post" action="{{ route('jobs.store') }}">
             @csrf
-            <section class="">
+            <!-- Form EQUIPMENT INFO Section -->
+            <section>
                 <h4 class="h4">Equipment Information</h4>
                 <fieldset class="row">
                     <div class="form-group col">
@@ -53,7 +54,9 @@
                     </div>
                 </fieldset>
             </section>
-            <section class="">
+            <!-- Form EQUIPMENT INFO Section -->
+            <section>
+                <hr>   
                 <h4 class="h4">Contact Information</h4>
                 <fieldset class="row">
                     <div class="form-group col">
@@ -88,7 +91,19 @@
                     </div>
                 </fieldset>
             </section>
+            <!-- Form PRODUCTION INFO Section -->
+            <section id="ctScannerProductionInfo" style="display: none;">
+                <hr>
+                <h4 class="h4">Production Information</h4>
+            </section>
+            <!-- Form SHIPPING INFO Section -->
+            <section id="shippingInfo">
+                <hr>
+                <h4 class="h4">Shipping Information</h4>
+            </section>
+            <!-- Form SUBMIT Section -->
             <section>
+                <hr>
                 <fieldset class="row">
                     <div class="form-group col">
                     <button type="submit" class="btn btn-primary">Add Job</button>
