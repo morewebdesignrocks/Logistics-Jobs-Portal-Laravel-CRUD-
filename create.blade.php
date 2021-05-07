@@ -89,11 +89,13 @@
                     </div>
                 </fieldset>
             </section>
-            <fieldset class="row">
-                <div class="form-group col">
-                <button type="submit" class="btn btn-primary">Add Job</button>
-                </div>
-            </fieldset>
+            <section>
+                <fieldset class="row">
+                    <div class="form-group col">
+                    <button type="submit" class="btn btn-primary">Add Job</button>
+                    </div>
+                </fieldset>
+            </section>
         </form>
     </div>
 </div>
