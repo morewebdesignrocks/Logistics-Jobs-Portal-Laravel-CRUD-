@@ -21,7 +21,6 @@
     <tbody>
         @foreach($job as $job)
         <tr>
-            <td>{{$job->id}}</td>
             <td>{{$job->job_number}}</td>
             <td>{{$job->job_type}}</td>
             <td>{{$job->modality}}</td>
