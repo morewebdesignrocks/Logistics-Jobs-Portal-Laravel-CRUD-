@@ -19,30 +19,83 @@
         </div>
         @endif
         <form method="post" action="{{ route('jobs.update', $job->id) }}">
-            <div class="form-group">
-                @csrf
-                @method('PATCH')
-                <label for="job_number">Job Number:</label>
-                <input type="number" class="form-control" name="job_number" value="{{ $job->job_number }}" />
-            </div>
-            <div class="form-group">
-                <label for="job_type">Job Type:</label>
-                <input type="text" class="form-control" name="job_type" value="{{ $job->job_type }}" />
-            </div>
-            <div class="form-group">
-                <label for="modality">Modality:</label>
-                <input type="text" class="form-control" name="modality" value="{{ $job->modality }}" />
-            </div>
-            <div class="form-group">
-                <label for="equipment_manufacturer">Manufacturer:</label>
-                <input type="text" class="form-control" name="equipment_manufacturer" value="{{ $job->equipment_manufacturer }}" />
-            </div>
-            <div class="form-group">
-                <label for="equipment_model">Model Number:</label>
-                <input type="text" class="form-control" name="equipment_model" value="{{ $job->equipment_model }}" />
-            </div>
-
-            <button type="submit" class="btn btn-block btn-danger">Update</button>
+        @csrf
+        @method('PATCH')
+            <section class="">
+                <h4 class="h4">Equipment Information</h4>
+                <fieldset class="row">
+                    <div class="form-group col">
+                        <label for="job_number">Job Number:</label>
+                        <input type="number" class="form-control" name="job_number" value="{{ $job->job_number }}">
+                    </div>
+                    <div class="form-group col">
+                        <label for="job_type">Job Type:</label>
+                        <select type="text" class="form-control" name="job_type" value="{{ $job->job_type }}">
+                            <option value="Wholesale">Wholesale</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Inventory">Inventory</option>
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label for="modality">Modality:</label>
+                        <select type="text" class="form-control" name="modality" value="{{ $job->modality }}">
+                            <option value="C-Arm">C-Arm</option>
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset class="row">
+                    <div class="form-group col">
+                        <label for="equipment_manufacturer">Equipment Manufacturer:</label>
+                        <input type="text" class="form-control" name="equipment_manufacturer" value="{{ $job->equipment_manufacturer }}">
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label for="equipment_model">Equipment Model:</label>
+                        <input type="text" class="form-control" name="equipment_model" value="{{ $job->equipment_model }}">
+                        </select>
+                    </div>
+                </fieldset>
+            </section>
+            <section class="">
+                <h4 class="h4">Contact Information</h4>
+                <fieldset class="row">
+                    <div class="form-group col">
+                        <label for="gmid_company_we_buy_from">GMID of company we are <b>buying</b> from:</label>
+                        <input type="text" class="form-control" name="gmid_company_we_buy_from" value="{{ $job->gmid_company_we_buy_from }}">
+                        </select>
+                    </div>
+                    <div class="form-group col">
+                        <label for="gmid_company_we_sell_to">GMID of company we are <b>selling</b> to:</label>
+                        <input type="text" class="form-control" name="gmid_company_we_sell_to" value="{{ $job->gmid_company_we_sell_to }}">
+                        </select>
+                    </div>
+                </fieldset>
+                <fieldset class="row">
+                    <div class="form-group col">
+                    <label>Is equipment going to be inspected prior to payment:</label>
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_1" value="{{ $job->equipment_requires_inspection }}">
+                                <label class="form-check-label" for="equipment_requires_inspection_1">Yes</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_2" value="{{ $job->equipment_requires_inspection }}">
+                                <label class="form-check-label" for="equipment_requires_inspection_2">No</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col">
+                        <label for="gmid_company_inspecting_equipment">GMID of company inspecting the equipment:</label>
+                        <input type="text" class="form-control" name="gmid_company_inspecting_equipment" value="{{ $job->gmid_company_inspecting_equipment }}">
+                        </select>
+                    </div>
+                </fieldset>
+            </section>
+            <fieldset class="row">
+                <div class="form-group col">
+                <button type="submit" class="btn btn-primary">Add Job</button>
+                </div>
+            </fieldset>
         </form>
     </div>
 </div>
