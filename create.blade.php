@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group col">
                         <label for="modality">Modality:</label>
-                        <select type="text" class="form-control" name="modality" onchange="elementShowHideArray(value, 'C-ArmProductionInfo', 'X-raysProductionInfo')" >
+                        <select type="text" class="form-control" name="modality" onchange="elementShowHideArray(value, ['C-ArmProductionInfo', 'X-RaysProductionInfo'])" >
                             <option value="">Select an option</option>
                             <option value="C-Arm">C-Arm</option>
                             <option value="X-Rays">X-Rays</option>
@@ -100,7 +100,7 @@
                 <h4 class="h4">Production Information (C-Arm)</h4>
             </section>
             <!-- Form X-Rays PRODUCTION INFO Section -->
-            <section id="X-raysProductionInfo" style="display: none;">
+            <section id="X-RaysProductionInfo" style="display: none;">
                 <hr>
                 <h4 class="h4">Production Information (X-Rays)</h4>
             </section>

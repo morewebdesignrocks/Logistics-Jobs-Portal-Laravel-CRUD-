@@ -41,11 +41,11 @@
                 }
             }  
             function elementShowHideArray(value, element) {
-                console.log("ShowHideArray is running")
+                console.log("ShowHideArray is running, and the value is: " + value + " and element is: " + element)
                 
                 for (i = 0; i < element.length; i++) {
-                    console.log("The value is: " + value + " and the element is: " + element[i])
                     let valueSection = value + "ProductionInfo";
+                    console.log("The Section to be displayed is: " + valueSection);
                 
                     if (valueSection === element[i]) {
                         let applyShowType = document.getElementById(element[i]);
