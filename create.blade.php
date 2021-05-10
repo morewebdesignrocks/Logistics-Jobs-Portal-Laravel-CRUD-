@@ -29,6 +29,7 @@
                     <div class="form-group col">
                         <label for="job_type">Job Type:</label>
                         <select type="text" class="form-control" name="job_type">
+                            <option value="">Select an option</option>
                             <option value="Wholesale">Wholesale</option>
                             <option value="Retail">Retail</option>
                             <option value="Inventory">Inventory</option>
@@ -36,8 +37,10 @@
                     </div>
                     <div class="form-group col">
                         <label for="modality">Modality:</label>
-                        <select type="text" class="form-control" name="modality">
+                        <select type="text" class="form-control" name="modality" onchange="elementShowHideArray(value, 'C-ArmProductionInfo', 'X-raysProductionInfo')" >
+                            <option value="">Select an option</option>
                             <option value="C-Arm">C-Arm</option>
+                            <option value="X-Rays">X-Rays</option>
                         </select>
                     </div>
                 </fieldset>
@@ -75,11 +78,11 @@
                     <label>Is equipment going to be inspected prior to payment:</label>
                         <div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_1" value="Yes" onchange="elementShowHide(value, 'gmid_company_inspecting_equipment')">
+                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_1" value="Yes" onchange="elementShowHideYesNo(value, 'gmid_company_inspecting_equipment')">
                                 <label class="form-check-label" for="equipment_requires_inspection_1">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_2" value="No" onchange="elementShowHide(value, 'gmid_company_inspecting_equipment')">
+                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_2" value="No" onchange="elementShowHideYesNo(value, 'gmid_company_inspecting_equipment')">
                                 <label class="form-check-label" for="equipment_requires_inspection_2">No</label>
                             </div>
                         </div>
@@ -91,10 +94,15 @@
                     </div>
                 </fieldset>
             </section>
-            <!-- Form PRODUCTION INFO Section -->
-            <section id="ctScannerProductionInfo" style="display: none;">
+            <!-- Form C-Arm PRODUCTION INFO Section -->
+            <section id="C-ArmProductionInfo" style="display: none;">
                 <hr>
-                <h4 class="h4">Production Information</h4>
+                <h4 class="h4">Production Information (C-Arm)</h4>
+            </section>
+            <!-- Form X-Rays PRODUCTION INFO Section -->
+            <section id="X-raysProductionInfo" style="display: none;">
+                <hr>
+                <h4 class="h4">Production Information (X-Rays)</h4>
             </section>
             <!-- Form SHIPPING INFO Section -->
             <section id="shippingInfo">

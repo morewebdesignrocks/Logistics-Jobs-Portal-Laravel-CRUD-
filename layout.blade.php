@@ -7,7 +7,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="/public/css/styles.css">
         <style>
             body {
                 max-width: 1024px;
@@ -32,7 +31,7 @@
         <link rel="stylesheet" type="text/javascript" href="{{ url('/js/app.js') }}">
         <!-- Functions thst should go in /js/app.js -->
         <script type="text/javascript">
-            function elementShowHide(value, element) {
+            function elementShowHideYesNo(value, element) {
                 let applyShowType = document.getElementById(element);
                 if (value === "Yes") {
                     applyShowType.style.display = "block"; 
@@ -40,7 +39,24 @@
                 else {
                     applyShowType.style.display = "none";
                 }
-            }    
+            }  
+            function elementShowHideArray(value, element) {
+                console.log("ShowHideArray is running")
+                
+                for (i = 0; i < element.length; i++) {
+                    console.log("The value is: " + value + " and the element is: " + element[i])
+                    let valueSection = value + "ProductionInfo";
+                
+                    if (valueSection === element[i]) {
+                        let applyShowType = document.getElementById(element[i]);
+                        applyShowType.style.display = "block"; 
+                    }
+                    else {
+                        let applyShowType = document.getElementById(element[i]);
+                        applyShowType.style.display = "none";
+                    }
+                }
+            }   
         </script>
    </body>
 </html>
