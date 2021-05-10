@@ -41,18 +41,15 @@
                 }
             }  
             function elementShowHideArray(value, element) {
-                console.log("ShowHideArray is running, and the value is: " + value + " and element is: " + element)
-                
+               
                 for (i = 0; i < element.length; i++) {
                     let valueSection = value + "ProductionInfo";
-                    console.log("The Section to be displayed is: " + valueSection);
+                    let applyShowType = document.getElementById(element[i]);
                 
                     if (valueSection === element[i]) {
-                        let applyShowType = document.getElementById(element[i]);
                         applyShowType.style.display = "block"; 
                     }
                     else {
-                        let applyShowType = document.getElementById(element[i]);
                         applyShowType.style.display = "none";
                     }
                 }
