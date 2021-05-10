@@ -96,19 +96,30 @@
             </section>
             <!-- Form C-Arm PRODUCTION INFO Section -->
             <section id="C-ArmProductionInfo" style="display: none;">
-                <hr>
-                <h4 class="h4">Production Information (C-Arm)</h4>
+                <section class="productionInformation">
+                    <hr>
+                    <h4 class="h4">Production Information (C-Arm)</h4>
+                </section>
+                <!-- Form   C-Arm SHIPPOING INFO Section -->
+                <section class="shippingInfo">
+                    <hr>
+                    <h4 class="h4">Shipping Information</h4>
+                </section>
             </section>
             <!-- Form X-Rays PRODUCTION INFO Section -->
             <section id="X-RaysProductionInfo" style="display: none;">
-                <hr>
-                <h4 class="h4">Production Information (X-Rays)</h4>
+                <section class="productionInformation">
+                    <hr>
+                    <h4 class="h4">Production Information (X-Rays)</h4>
+                </section>
+                <!-- Form X-Rays SHIPPOING INFO Section -->
+                <section class="shippingInfo">
+                    <hr>
+                    <h4 class="h4">Shipping Information</h4>
+                </section>
             </section>
-            <!-- Form SHIPPING INFO Section -->
-            <section id="shippingInfo">
-                <hr>
-                <h4 class="h4">Shipping Information</h4>
-            </section>
+            
+        
             <!-- Form SUBMIT Section -->
             <section>
                 <hr>
