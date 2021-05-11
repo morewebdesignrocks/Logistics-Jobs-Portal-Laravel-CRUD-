@@ -37,8 +37,9 @@
                     </div>
                     <div class="form-group col">
                         <label for="modality">Modality:</label>
-                        <select type="text" class="form-control" name="modality" onchange="elementShowHideArray(value, ['C-ArmProductionInfo', 'X-RaysProductionInfo'])" >
+                        <select type="text" class="form-control" name="modality" onchange="elementShowHideArray(value, ['C-ArmProductionInfo', 'X-RaysProductionInfo', 'CT-ScannerProductionInfo'])" >
                             <option value="">Select an option</option>
+                            <option value="CT-Scanner">CT-Scanner</option>
                             <option value="C-Arm">C-Arm</option>
                             <option value="X-Rays">X-Rays</option>
                         </select>
@@ -93,6 +94,50 @@
                         </select>
                     </div>
                 </fieldset>
+            </section>
+            <!-- Form CT PRODUCTION INFO Section -->
+            <section id="CT-ScannerProductionInfo" style="display: none;">
+                <section class="productionInformation">
+                    <hr>
+                    <h4 class="h4">Production Information (CT-Scanner)</h4>
+                    <fieldset class="row">
+                        <div class="form-group col">
+                            <label>Is the unit being painted?</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="is_unit_being_painted" id="is_unit_being_painted_01" value="Yes">
+                                    <label class="form-check-label" for="is_unit_being_painted_01">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="is_unit_being_painted" id="is_unit_being_painted_02" value="No" >
+                                    <label class="form-check-label" for="is_unit_being_painted_02">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col">
+                            <label>Does it need a new tube?</label>
+                            <div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="does_need_new_tube" id="does_need_new_tube_01" value="Yes">
+                                    <label class="form-check-label" for="does_need_new_tube_01">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="does_need_new_tube" id="does_need_new_tube_02" value="No" >
+                                    <label class="form-check-label" for="does_need_new_tube_02">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col">
+                            <label for="job_number">Name of Facility to be imputed into the Machine:</label>
+                            <input type="text" class="form-control" name="name_of_facility_to_be_imputed_into_the_machine:">
+                        </div>
+                    </fieldset>
+                </section>
+                <!-- Form   C-Arm SHIPPOING INFO Section -->
+                <section class="shippingInfo">
+                    <hr>
+                    <h4 class="h4">Shipping Information</h4>
+                </section>
             </section>
             <!-- Form C-Arm PRODUCTION INFO Section -->
             <section id="C-ArmProductionInfo" style="display: none;">

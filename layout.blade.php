@@ -41,7 +41,6 @@
                 }
             }  
             function elementShowHideArray(value, element) {
-               
                 for (i = 0; i < element.length; i++) {
                     let valueSection = value + "ProductionInfo";
                     let applyShowType = document.getElementById(element[i]);
