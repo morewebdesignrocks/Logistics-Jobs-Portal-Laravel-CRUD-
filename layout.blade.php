@@ -31,7 +31,7 @@
         <link rel="stylesheet" type="text/javascript" href="{{ url('/js/app.js') }}">
         <!-- Functions thst should go in /js/app.js -->
         <script type="text/javascript">
-            function elementShowHideYesNo(value, element) {
+            function showHideYesNo(value, element) {
                 let applyShowType = document.getElementById(element);
                 if (value === "Yes") {
                     applyShowType.style.display = "block"; 
@@ -39,8 +39,8 @@
                 else {
                     applyShowType.style.display = "none";
                 }
-            }  
-            function elementShowHideArray(value, element) {
+            }   
+            function showHideModality(value, element) {
                 for (i = 0; i < element.length; i++) {
                     let valueSection = value + "ProductionInfo";
                     let applyShowType = document.getElementById(element[i]);
@@ -52,7 +52,20 @@
                         applyShowType.style.display = "none";
                     }
                 }
-            }   
+            }
+            function showHideJobType(value, element) {
+                for (i = 0; i < element.length; i++) {
+                    let valueSection = value + "CT-Scanner";
+                    let applyShowType = document.getElementById(element[i]);
+                
+                    if (valueSection === element[i]) {
+                        applyShowType.style.display = "block"; 
+                    }
+                    else {
+                        applyShowType.style.display = "none";
+                    }
+                }
+            } 
         </script>
    </body>
 </html>
