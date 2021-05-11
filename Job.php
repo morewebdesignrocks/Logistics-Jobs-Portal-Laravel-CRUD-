@@ -10,8 +10,8 @@ class Job extends Model
     use HasFactory;
     protected $fillable = [
         'job_number', 
-        'job_type', 
         'modality',
+        'job_type', 
         'equipment_manufacturer',
         'equipment_model',
         'gmid_company_we_buy_from',

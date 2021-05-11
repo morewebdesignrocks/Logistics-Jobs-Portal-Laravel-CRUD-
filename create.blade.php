@@ -23,7 +23,7 @@
                 <h4 class="h4">Equipment Information</h4>
                 <fieldset class="row">
                     <div class="form-group col">
-                        <label for="job_number">Job Number:</label>
+                        <label for="job_number">Job number:</label>
                         <input type="number" class="form-control" name="job_number">
                     </div>
                     <div class="form-group col">
@@ -36,7 +36,7 @@
                         </select>
                     </div>
                     <div class="form-group col">
-                        <label for="job_type">Job Type:</label>
+                        <label for="job_type">Job type:</label>
                         <select type="text" class="form-control" name="job_type" onchange="showHideJobType(value, ['WholesaleCT-Scanner'])">
                             <option value="">Select an option</option>
                             <option value="Wholesale">Wholesale</option>
@@ -47,12 +47,12 @@
                 </fieldset>
                 <fieldset class="row">
                     <div class="form-group col">
-                        <label for="equipment_manufacturer">Equipment Manufacturer:</label>
+                        <label for="equipment_manufacturer">Equipment manufacturer:</label>
                         <input type="text" class="form-control" name="equipment_manufacturer">
                         </select>
                     </div>
                     <div class="form-group col">
-                        <label for="equipment_model">Equipment Model:</label>
+                        <label for="equipment_model">Equipment model:</label>
                         <input type="text" class="form-control" name="equipment_model">
                         </select>
                     </div>
@@ -100,6 +100,7 @@
                 <section class="productionInformation">
                     <hr>
                     <h4 class="h4">Production Information (CT-Scanner)</h4>
+                    <!-- Form CT WHOLESALE PRODUCTION INFO Section -->
                     <section id="WholesaleCT-Scanner" style="display: none;">
                         <fieldset class="row">
                             <div class="form-group col">
@@ -128,17 +129,96 @@
                                     </div>
                                 </div>
                             </div>
+                        </fieldset>
+                        <fieldset class="row">
                             <div class="form-group col">
                                 <label for="job_number">Name of Facility to be imputed into the Machine:</label>
-                                <input type="text" class="form-control" name="name_of_facility_to_be_imputed_into_the_machine:">
+                                <input type="text" class="form-control" name="name_of_facility_to_be_imputed_into_the_machine">
+                            </div>
+                            <div class="form-group col">
+                                <label for="job_number">Any additional parts or notes for Amber's production needed?</label>
+                                <input type="text" class="form-control" name="other_parts_or_additional_notes_for_ambers_production">
+                            </div>
+                        </fieldset>
+                        <fieldset class="row">
+                            <div class="form-group col">
+                                <label for="job_number">Is Amber providing Gamma Tech drawings?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="is_amber_providing_gamma_tech_drawings" id="is_amber_providing_gamma_tech_drawings_01" value="Yes">
+                                        <label class="form-check-label" for="is_amber_providing_gamma_tech_drawings_01">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="is_amber_providing_gamma_tech_drawings" id="is_amber_providing_gamma_tech_drawings_02" value="No" >
+                                        <label class="form-check-label" for="is_amber_providing_gamma_tech_drawings_02">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label for="job_number">Who is the POC in-order to obtain room dimensions?</label>
+                                <input type="text" class="form-control" name="poc_in_order_to_obtain_room_dimensions">
                             </div>
                         </fieldset>
                         <fieldset class="row">
                         <div class="form-group col">
-                                <label for="job_number">Any other parts or additional notes for Amber's production needed?</label>
-                                <input type="text" class="form-control" name="name_of_facility_to_be_imputed_into_the_machine:">
+                                <label for="job_number">Has the customer chosen a contractor?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="has_the_customer_chosen_a_contractor" id="has_the_customer_chosen_a_contractor_01" value="Yes">
+                                        <label class="form-check-label" for="has_the_customer_chosen_a_contractor_01">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="has_the_customer_chosen_a_contractor" id="has_the_customer_chosen_a_contractor_02" value="No" >
+                                        <label class="form-check-label" for="has_the_customer_chosen_a_contractor_02">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label for="job_number">If yes, what is the contractor's GMID?</label>
+                                <input type="text" class="form-control" name="what_is_the_contractors_gmid">
                             </div>
                         </fieldset>
+                        <fieldset class="row">
+                            <div class="form-group col">
+                                <label for="job_number">Is Amber providing training and applications for the CT Scanner?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="is_amber_providing_training_and_applications_for_the_ct_scanner" id="is_amber_providing_training_and_applications_for_the_ct_scanner_01" value="Yes">
+                                        <label class="form-check-label" for="is_amber_providing_training_and_applications_for_the_ct_scanner_01">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="is_amber_providing_training_and_applications_for_the_ct_scanner" id="is_amber_providing_training_and_applications_for_the_ct_scanner_02" value="No" >
+                                        <label class="form-check-label" for="is_amber_providing_training_and_applications_for_the_ct_scanner_02">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label for="job_number">Will the images need to be directed to a specific PACS provider?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="will_the_images_need_to_be_directed_to_a_specific_pacs" id="will_the_images_need_to_be_directed_to_a_specific_pacs_01" value="Yes" onchange="showHideYesNo(value, 'cutomer_it_person_contact_info')">
+                                        <label class="form-check-label" for="will_the_images_need_to_be_directed_to_a_specific_pacs_01">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="will_the_images_need_to_be_directed_to_a_specific_pacs" id="will_the_images_need_to_be_directed_to_a_specific_pacs_02" value="No" onchange="showHideYesNo(value, 'cutomer_it_person_contact_info')">
+                                        <label class="form-check-label" for="will_the_images_need_to_be_directed_to_a_specific_pacs_02">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <section id="cutomer_it_person_contact_info" style="display: none;">
+                            <label for="job_number"><u>Customer's IT person contact information:</u></label>
+                            <fieldset class="row">
+                                <div class="form-group col">
+                                    <label for="job_number">Complete Name:</label>
+                                    <input type="text" class="form-control" name="customers_it_person_name">
+                                </div>
+                                <div class="form-group col">
+                                    <label for="job_number">Phone number:</label>
+                                    <input type="text" class="form-control" name="customers_it_person_phone_number">
+                                </div>
+                            </fieldset>
+                        </section>
                     </section>
                 </section>
                 <!-- Form   C-Arm SHIPPOING INFO Section -->
