@@ -90,7 +90,7 @@
                     </div>
                     <div id="g_06" class="form-group col" style="display: none;">
                         <label for="g_06">GMID of company inspecting the equipment:</label>
-                        <input type="text" class="form-control" name="g_06">
+                        <input type="number" class="form-control" name="g_06">
                         </select>
                     </div>
                 </fieldset>
@@ -211,11 +211,11 @@
                             <fieldset class="row">
                                 <div class="form-group col">
                                     <label for="w_ct_011">Complete name:</label>
-                                    <input type="text" class="form-control" name="w_ct_011">
+                                    <input class="form-control" type="text" name="w_ct_011">
                                 </div>
                                 <div class="form-group col">
-                                    <label for="w_ct_012">Phone number:</label>
-                                    <input type="text" class="form-control" name="w_ct_012">
+                                    <label for="w_ct_012">Phone number: <small>Format: 123-456-7890</small></label>
+                                    <input class="form-control" type="tel" name="w_ct_012" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
                                 </div>
                             </fieldset>
                         </section>
