@@ -20,18 +20,18 @@ class Job extends Model
         'g_05',
         'g_06',
         /* Wholesale CT questions */
-        'w_ct_001',
-        'w_ct_002',
-        'w_ct_003',
-        'w_ct_004',
-        'w_ct_005',
-        'w_ct_006',
-        'w_ct_007',
-        'w_ct_008',
-        'w_ct_009',
-        'w_ct_010',
-        'w_ct_011',
-        'w_ct_012'
+        'r_ct_001',
+        'r_ct_002',
+        'r_ct_003',
+        'r_ct_004',
+        'r_ct_005',
+        'r_ct_006',
+        'r_ct_007',
+        'r_ct_008',
+        'r_ct_009',
+        'r_ct_010',
+        'r_ct_011',
+        'r_ct_012'
     ];
 
 }

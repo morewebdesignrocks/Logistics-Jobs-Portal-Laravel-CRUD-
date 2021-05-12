@@ -47,19 +47,19 @@ class JobController extends Controller
             'g_04' => 'numeric',
             'g_05' => 'string|max:255',
             'g_06' => 'numeric',
-            /* Wholesale CT questions */
-            'w_ct_001' => 'string|max:255',
-            'w_ct_002' => 'string|max:255',
-            'w_ct_003' => 'string|max:255',
-            'w_ct_004' => 'string|max:255',
-            'w_ct_005' => 'string|max:255',
-            'w_ct_006' => 'string|max:255',
-            'w_ct_007' => 'string|max:255',
-            'w_ct_008' => 'string|max:255',
-            'w_ct_009' => 'string|max:255',
-            'w_ct_010' => 'string|max:255',
-            'w_ct_011' => 'string|max:255',
-            'w_ct_012' => 'numeric'
+            /* Reatail CT questions */
+            'r_ct_001' => 'string|max:255',
+            'r_ct_002' => 'string|max:255',
+            'r_ct_003' => 'string|max:255',
+            'r_ct_004' => 'string|max:255',
+            'r_ct_005' => 'string|max:255',
+            'r_ct_006' => 'string|max:255',
+            'r_ct_007' => 'string|max:255',
+            'r_ct_008' => 'string|max:255',
+            'r_ct_009' => 'string|max:255',
+            'r_ct_010' => 'string|max:255',
+            'r_ct_011' => 'string|max:255',
+            'r_ct_012' => 'numeric'
         ]);
 
         $job = Job::create($storeData);
