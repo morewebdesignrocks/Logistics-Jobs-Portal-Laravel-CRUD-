@@ -38,7 +38,7 @@ class CreateJobsTable extends Migration
             $table->string('w_ct_009');
             $table->string('w_ct_010');
             $table->string('w_ct_011');
-            $table->integer('w_ct_012');
+            $table->bigInteger('w_ct_012');
         });
     }
 

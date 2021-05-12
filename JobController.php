@@ -59,11 +59,9 @@ class JobController extends Controller
             'w_ct_009' => 'string|max:255',
             'w_ct_010' => 'string|max:255',
             'w_ct_011' => 'string|max:255',
-            'w_ct_012' => 'numeric',
-
-
-
+            'w_ct_012' => 'numeric'
         ]);
+
         $job = Job::create($storeData);
 
         return redirect('/jobs')->with('completed', 'Job created!');
