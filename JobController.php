@@ -37,15 +37,32 @@ class JobController extends Controller
     public function store(Request $request)
     {
         $storeData = $request->validate([
+            /* General questions */
             'job_number' => 'required|numeric',
             'job_type' => 'required|string|max:255',
             'modality' => 'required|string|max:255',
-            'equipment_manufacturer' => 'string|max:255',
-            'equipment_model' => 'string|max:255',
-            'gmid_company_we_buy_from' => 'numeric',
-            'gmid_company_we_sell_to' => 'numeric',
-            'equipment_requires_inspection' => 'string|max:255',
-            'gmid_company_inspecting_equipment' => 'numeric'
+            'g_01' => 'string|max:255',
+            'g_02' => 'string|max:255',
+            'g_03' => 'numeric',
+            'g_04' => 'numeric',
+            'g_05' => 'string|max:255',
+            'g_06' => 'numeric',
+            /* Wholesale CT questions */
+            'w_ct_001' => 'string|max:255',
+            'w_ct_002' => 'string|max:255',
+            'w_ct_003' => 'string|max:255',
+            'w_ct_004' => 'string|max:255',
+            'w_ct_005' => 'string|max:255',
+            'w_ct_006' => 'string|max:255',
+            'w_ct_007' => 'string|max:255',
+            'w_ct_008' => 'string|max:255',
+            'w_ct_009' => 'string|max:255',
+            'w_ct_010' => 'string|max:255',
+            'w_ct_011' => 'string|max:255',
+            'w_ct_012' => 'numeric',
+
+
+
         ]);
         $job = Job::create($storeData);
 

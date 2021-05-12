@@ -47,13 +47,13 @@
                 </fieldset>
                 <fieldset class="row">
                     <div class="form-group col">
-                        <label for="equipment_manufacturer">Equipment manufacturer:</label>
-                        <input type="text" class="form-control" name="equipment_manufacturer">
+                        <label for="g_01">Equipment manufacturer:</label>
+                        <input type="text" class="form-control" name="g_01">
                         </select>
                     </div>
                     <div class="form-group col">
-                        <label for="equipment_model">Equipment model:</label>
-                        <input type="text" class="form-control" name="equipment_model">
+                        <label for="g_02">Equipment model:</label>
+                        <input type="text" class="form-control" name="g_02">
                         </select>
                     </div>
                 </fieldset>
@@ -64,33 +64,33 @@
                 <h4 class="h4">Contact Information</h4>
                 <fieldset class="row">
                     <div class="form-group col">
-                        <label for="gmid_company_we_buy_from">GMID of company we are <b>buying</b> from:</label>
-                        <input type="text" class="form-control" name="gmid_company_we_buy_from">
+                        <label for="g_03">GMID of company we are <b>buying</b> from:</label>
+                        <input type="text" class="form-control" name="g_03">
                         </select>
                     </div>
                     <div class="form-group col">
-                        <label for="gmid_company_we_sell_to">GMID of company we are <b>selling</b> to:</label>
-                        <input type="text" class="form-control" name="gmid_company_we_sell_to">
+                        <label for="g_04">GMID of company we are <b>selling</b> to:</label>
+                        <input type="text" class="form-control" name="g_04">
                         </select>
                     </div>
                 </fieldset>
                 <fieldset class="row">
                     <div class="form-group col">
-                    <label>Is equipment going to be inspected prior to payment:</label>
+                    <label for="g_05">Is equipment going to be inspected prior to payment:</label>
                         <div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_1" value="Yes" onchange="showHideYesNo(value, 'gmid_company_inspecting_equipment')">
-                                <label class="form-check-label" for="equipment_requires_inspection_1">Yes</label>
+                                <input class="form-check-input" type="radio" name="g_05" id="g_05_y" value="Yes" onchange="showHideYesNo(value, 'g_06')">
+                                <label class="form-check-label" for="g_05_y">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="equipment_requires_inspection" id="equipment_requires_inspection_2" value="No" onchange="showHideYesNo(value, 'gmid_company_inspecting_equipment')">
-                                <label class="form-check-label" for="equipment_requires_inspection_2">No</label>
+                                <input class="form-check-input" type="radio" name="g_05" id="g_05_n" value="No" onchange="showHideYesNo(value, 'g_06')">
+                                <label class="form-check-label" for="g_05_n">No</label>
                             </div>
                         </div>
                     </div>
-                    <div id="gmid_company_inspecting_equipment" class="form-group col" style="display: none;">
-                        <label for="gmid_company_inspecting_equipment">GMID of company inspecting the equipment:</label>
-                        <input type="text" class="form-control" name="gmid_company_inspecting_equipment">
+                    <div id="g_06" class="form-group col" style="display: none;">
+                        <label for="g_06">GMID of company inspecting the equipment:</label>
+                        <input type="text" class="form-control" name="g_06">
                         </select>
                     </div>
                 </fieldset>
@@ -107,12 +107,12 @@
                                 <label>Is the unit being painted?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="is_unit_being_painted" id="is_unit_being_painted_01" value="Yes">
-                                        <label class="form-check-label" for="is_unit_being_painted_01">Yes</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_001" id="w_ct_001_y" value="Yes">
+                                        <label class="form-check-label" for="w_ct_001_01">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="is_unit_being_painted" id="is_unit_being_painted_02" value="No" >
-                                        <label class="form-check-label" for="is_unit_being_painted_02">No</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_001" id="w_ct_001_n" value="No" >
+                                        <label class="form-check-label" for="w_ct_001_n">No</label>
                                     </div>
                                 </div>
                             </div>
@@ -120,88 +120,88 @@
                                 <label>Does it need a new tube?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="does_need_new_tube" id="does_need_new_tube_01" value="Yes">
-                                        <label class="form-check-label" for="does_need_new_tube_01">Yes</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_002" id="w_ct_002_y" value="Yes">
+                                        <label class="form-check-label" for="w_ct_002_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="does_need_new_tube" id="does_need_new_tube_02" value="No" >
-                                        <label class="form-check-label" for="does_need_new_tube_02">No</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_002" id="w_ct_002_n" value="No" >
+                                        <label class="form-check-label" for="w_ct_002_n">No</label>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
                         <fieldset class="row">
                             <div class="form-group col">
-                                <label for="job_number">Name of Facility to be imputed into the Machine:</label>
-                                <input type="text" class="form-control" name="name_of_facility_to_be_imputed_into_the_machine">
+                                <label for="w_ct_003">Name of Facility to be imputed into the Machine:</label>
+                                <input type="text" class="form-control" name="w_ct_003">
                             </div>
                             <div class="form-group col">
-                                <label for="job_number">Any additional parts or notes for Amber's production needed?</label>
-                                <input type="text" class="form-control" name="other_parts_or_additional_notes_for_ambers_production">
+                                <label for="w_ct_004">Any additional parts or notes for Amber's production needed?</label>
+                                <input type="text" class="form-control" name="w_ct_004">
                             </div>
                         </fieldset>
                         <fieldset class="row">
                             <div class="form-group col">
-                                <label for="job_number">Is Amber providing Gamma Tech drawings?</label>
+                                <label for="w_ct_005">Is Amber providing Gamma Tech drawings?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="is_amber_providing_gamma_tech_drawings" id="is_amber_providing_gamma_tech_drawings_01" value="Yes">
-                                        <label class="form-check-label" for="is_amber_providing_gamma_tech_drawings_01">Yes</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_005" id="w_ct_005_y" value="Yes">
+                                        <label class="form-check-label" for="w_ct_005_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="is_amber_providing_gamma_tech_drawings" id="is_amber_providing_gamma_tech_drawings_02" value="No" >
-                                        <label class="form-check-label" for="is_amber_providing_gamma_tech_drawings_02">No</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_005" id="w_ct_005_n" value="No" >
+                                        <label class="form-check-label" for="w_ct_005_n">No</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group col">
                                 <label for="job_number">Who is the POC in-order to obtain room dimensions?</label>
-                                <input type="text" class="form-control" name="poc_in_order_to_obtain_room_dimensions">
+                                <input type="text" class="form-control" name="w_ct_006">
                             </div>
                         </fieldset>
                         <fieldset class="row">
                         <div class="form-group col">
-                                <label for="job_number">Has the customer chosen a contractor?</label>
+                                <label for="w_ct_007">Has the customer chosen a contractor?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="has_the_customer_chosen_a_contractor" id="has_the_customer_chosen_a_contractor_01" value="Yes">
-                                        <label class="form-check-label" for="has_the_customer_chosen_a_contractor_01">Yes</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_007" id="w_ct_007_y" value="Yes">
+                                        <label class="form-check-label" for="w_ct_007_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="has_the_customer_chosen_a_contractor" id="has_the_customer_chosen_a_contractor_02" value="No" >
-                                        <label class="form-check-label" for="has_the_customer_chosen_a_contractor_02">No</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_007" id="w_ct_007_n" value="No" >
+                                        <label class="form-check-label" for="w_ct_007_n">No</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group col">
-                                <label for="job_number">If yes, what is the contractor's GMID?</label>
-                                <input type="text" class="form-control" name="what_is_the_contractors_gmid">
+                                <label for="w_ct_008">If yes, what is the contractor's GMID?</label>
+                                <input type="text" class="form-control" name="w_ct_008">
                             </div>
                         </fieldset>
                         <fieldset class="row">
                             <div class="form-group col">
-                                <label for="job_number">Is Amber providing training and applications for the CT Scanner?</label>
+                                <label for="w_ct_009">Is Amber providing training and applications for the CT Scanner?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="is_amber_providing_training_and_applications_for_the_ct_scanner" id="is_amber_providing_training_and_applications_for_the_ct_scanner_01" value="Yes">
-                                        <label class="form-check-label" for="is_amber_providing_training_and_applications_for_the_ct_scanner_01">Yes</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_009" id="w_ct_009_y" value="Yes">
+                                        <label class="form-check-label" for="w_ct_009_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="is_amber_providing_training_and_applications_for_the_ct_scanner" id="is_amber_providing_training_and_applications_for_the_ct_scanner_02" value="No" >
-                                        <label class="form-check-label" for="is_amber_providing_training_and_applications_for_the_ct_scanner_02">No</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_009" id="w_ct_009_n" value="No" >
+                                        <label class="form-check-label" for="w_ct_009_n">No</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group col">
-                                <label for="job_number">Will the images need to be directed to a specific PACS provider?</label>
+                                <label for="w_ct_010">Will the images need to be directed to a specific PACS provider?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="will_the_images_need_to_be_directed_to_a_specific_pacs" id="will_the_images_need_to_be_directed_to_a_specific_pacs_01" value="Yes" onchange="showHideYesNo(value, 'cutomer_it_person_contact_info')">
-                                        <label class="form-check-label" for="will_the_images_need_to_be_directed_to_a_specific_pacs_01">Yes</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_010" id="w_ct_010_y" value="Yes" onchange="showHideYesNo(value, 'cutomer_it_person_contact_info')">
+                                        <label class="form-check-label" for="w_ct_010_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="will_the_images_need_to_be_directed_to_a_specific_pacs" id="will_the_images_need_to_be_directed_to_a_specific_pacs_02" value="No" onchange="showHideYesNo(value, 'cutomer_it_person_contact_info')">
-                                        <label class="form-check-label" for="will_the_images_need_to_be_directed_to_a_specific_pacs_02">No</label>
+                                        <input class="form-check-input" type="radio" name="w_ct_010" id="w_ct_010_n" value="No" onchange="showHideYesNo(value, 'cutomer_it_person_contact_info')">
+                                        <label class="form-check-label" for="w_ct_010_n">No</label>
                                     </div>
                                 </div>
                             </div>
@@ -210,12 +210,12 @@
                             <label for="job_number"><u>Customer's IT person contact information:</u></label>
                             <fieldset class="row">
                                 <div class="form-group col">
-                                    <label for="job_number">Complete Name:</label>
-                                    <input type="text" class="form-control" name="customers_it_person_name">
+                                    <label for="w_ct_011">Complete name:</label>
+                                    <input type="text" class="form-control" name="w_ct_011">
                                 </div>
                                 <div class="form-group col">
-                                    <label for="job_number">Phone number:</label>
-                                    <input type="text" class="form-control" name="customers_it_person_phone_number">
+                                    <label for="w_ct_012">Phone number:</label>
+                                    <input type="text" class="form-control" name="w_ct_012">
                                 </div>
                             </fieldset>
                         </section>
