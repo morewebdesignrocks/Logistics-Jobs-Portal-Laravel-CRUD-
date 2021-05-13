@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group col">
                         <label for="job_type">Job type:</label>
-                        <select type="text" class="form-control" name="job_type" onchange="showHideJobType(value, ['RetailCT-Scanner', 'InventoryCT-Scanner'])">
+                        <select type="text" class="form-control" name="job_type" onchange="showHideJobType(value, ['RetailCT-Scanner', 'InventoryCT-Scanner', 'WholesaleCT-Scanner'])">
                             <option value="">Select an option</option>
                             <option value="Wholesale">Wholesale</option>
                             <option value="Retail">Retail</option>
@@ -129,18 +129,6 @@
                                     </div>
                                 </div>
                             </div>
-                        </fieldset>
-                        <fieldset class="row">
-                            <div class="form-group col">
-                                <label for="r_ct_003">Name of Facility to be imputed into the Machine:</label>
-                                <input type="text" class="form-control" name="r_ct_003">
-                            </div>
-                            <div class="form-group col">
-                                <label for="r_ct_004">Any additional parts or notes for Amber's production needed?</label>
-                                <input type="text" class="form-control" name="r_ct_004">
-                            </div>
-                        </fieldset>
-                        <fieldset class="row">
                             <div class="form-group col">
                                 <label for="r_ct_005">Is Amber providing Gamma Tech drawings?</label>
                                 <div>
@@ -154,6 +142,12 @@
                                     </div>
                                 </div>
                             </div>
+                        </fieldset>
+                        <fieldset class="row">
+                            <div class="form-group col">
+                                <label for="r_ct_003">Name of Facility to be imputed into the Machine:</label>
+                                <input type="text" class="form-control" name="r_ct_003">
+                            </div>     
                             <div class="form-group col">
                                 <label for="job_number">Who is the POC in-order to obtain room dimensions?</label>
                                 <input type="text" class="form-control" name="r_ct_006">
@@ -221,19 +215,25 @@
                         </section>
                         <fieldset class="row">
                             <div class="form-group col">
-                                <label for="rw_ct_013">Do you want an Amber employee to perform the mechanical installation?</label>
+                                <label for="rw_ct_002">Do you want an Amber employee to perform the mechanical installation?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="rw_ct_013" id="rw_ct_013_y" value="Yes">
-                                        <label class="form-check-label" for="rw_ct_013_y">Yes</label>
+                                        <input class="form-check-input" type="radio" name="rw_ct_002" id="rw_ct_002_y" value="Yes">
+                                        <label class="form-check-label" for="rw_ct_002_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="rw_ct_013" id="rw_ct_013_n" value="No">
-                                        <label class="form-check-label" for="rw_ct_013_n">No</label>
+                                        <input class="form-check-input" type="radio" name="rw_ct_002" id="rw_ct_002_n" value="No">
+                                        <label class="form-check-label" for="rw_ct_002_n">No</label>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
+                        <fieldset class="row">
+                        <div class="form-group col">
+                                <label for="ri_ct_002">Any additional parts or notes for Amber's production needed?</label>
+                                <input type="text" class="form-control" name="ri_ct_002">
+                            </div>
+                        <fieldset>
                     </section>
                     <!-- Form CT INVENTORY PRODUCTION INFO Section -->
                     <section id="InventoryCT-Scanner" style="display: none;">
@@ -242,44 +242,31 @@
                                 <label>Is Amber deinstalling the scanner?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_001" id="r_ct_001_y" value="Yes">
-                                        <label class="form-check-label" for="r_ct_001_01">Yes</label>
+                                        <input class="form-check-input" type="radio" name="i_ct_001" id="i_ct_001_y" value="Yes">
+                                        <label class="form-check-label" for="i_ct_001_01">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_001" id="r_ct_001_n" value="No" >
-                                        <label class="form-check-label" for="r_ct_001_n">No</label>
+                                        <input class="form-check-input" type="radio" name="i_ct_001" id="i_ct_001_n" value="No" >
+                                        <label class="form-check-label" for="i_ct_001_n">No</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group col">
-                                <label>Is Amber deinstalling the scanner?</label>
-                                <div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_y" value="Yes">
-                                        <label class="form-check-label" for="r_ct_002_y">Yes</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_n" value="No" >
-                                        <label class="form-check-label" for="r_ct_002_n">No</label>
-                                    </div>
-                                </div>
+                                <label for="i_ct_002">What floor is the scanner located?</label>
+                                <input class="form-control" type="number" name="i_ct_002">
                             </div>
                         </fieldset>
                         <fieldset class="row">
                             <div class="form-group col">
-                                    <label for="r_ct_012">What floor is the scanner located?</label>
-                                    <input class="form-control" type="number" name="r_ct_012">
-                                </div>
-                            <div class="form-group col">
                                 <label>Are riggers required?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_y" value="Yes">
-                                        <label class="form-check-label" for="r_ct_002_y">Yes</label>
+                                        <input class="form-check-input" type="radio" name="i_ct_003" id="i_ct_003_y" value="Yes">
+                                        <label class="form-check-label" for="i_ct_003_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_n" value="No" >
-                                        <label class="form-check-label" for="r_ct_002_n">No</label>
+                                        <input class="form-check-input" type="radio" name="i_ct_003" id="i_ct_003_n" value="No" >
+                                        <label class="form-check-label" for="i_ct_003_n">No</label>
                                     </div>
                                 </div>
                             </div>
@@ -289,25 +276,43 @@
                                 <label>Do they have a loading dock that is dock high?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_y" value="Yes">
-                                        <label class="form-check-label" for="r_ct_002_y">Yes</label>
+                                        <input class="form-check-input" type="radio" name="i_ct_004" id="i_ct_004_y" value="Yes">
+                                        <label class="form-check-label" for="i_ct_004_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_n" value="No" >
-                                        <label class="form-check-label" for="r_ct_002_n">No</label>
+                                        <input class="form-check-input" type="radio" name="i_ct_004" id="i_ct_004_n" value="No" >
+                                        <label class="form-check-label" for="i_ct_004_n">No</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="form-group col">
-                                <label for="r_ct_012">What hours do we have access to the scanner?</label>
-                                <input class="form-control" type="text" name="r_ct_012">
+                                <label for="i_ct_005">What hours do we have access to the scanner?</label>
+                                <input class="form-control" type="text" name="i_ct_005">
                             </div>   
                         </fieldset>
                         <fieldset class="row">
                             <div class="form-group col">
-                                <label for="r_ct_012">Any additional parts or notes for Amber's production needed?</label>
-                                <input class="form-control" type="text" name="r_ct_012">
+                                <label for="ri_ct_002">Any additional parts or notes for Amber's production needed?</label>
+                                <input class="form-control" type="text" name="ri_ct_002">
                             </div>   
+                        </fieldset>
+                    </section>
+                    <!-- Form CT INVENTORY PRODUCTION INFO Section -->
+                    <section id="WholesaleCT-Scanner" style="display: none;">
+                        <fieldset class="row">
+                            <div class="form-group col">
+                                <label for="rw_ct_001">Do you want an Amber employee to perform the mechanical installation?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rw_ct_001" id="rw_ct_001_y" value="Yes">
+                                        <label class="form-check-label" for="rw_ct_001_y">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rw_ct_001" id="rw_ct_001_n" value="No">
+                                        <label class="form-check-label" for="rw_ct_001_n">No</label>
+                                    </div>
+                                </div>
+                            </div>
                         </fieldset>
                     </section>
                 </section>

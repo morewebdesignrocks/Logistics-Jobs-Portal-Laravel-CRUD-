@@ -23,7 +23,6 @@ class Job extends Model
         'r_ct_001',
         'r_ct_002',
         'r_ct_003',
-        'r_ct_004',
         'r_ct_005',
         'r_ct_006',
         'r_ct_007',
@@ -31,7 +30,18 @@ class Job extends Model
         'r_ct_009',
         'r_ct_010',
         'r_ct_011',
-        'r_ct_012'
+        'r_ct_012',
+        /* Inventory CT questions */
+        'i_ct_001',
+        'i_ct_002',
+        'i_ct_003',
+        'i_ct_004',
+        'i_ct_005',
+        'i_ct_006',
+        'i_ct_007',
+        /* Mix CT questions */
+        'rw_ct_001',
+        'ri_ct_002'
     ];
 
 }

@@ -38,28 +38,39 @@ class JobController extends Controller
     {
         $storeData = $request->validate([
             /* General questions */
-            'job_number' => 'required|numeric',
-            'job_type' => 'required|string|max:255',
-            'modality' => 'required|string|max:255',
-            'g_01' => 'string|max:255',
-            'g_02' => 'string|max:255',
-            'g_03' => 'numeric',
-            'g_04' => 'numeric',
-            'g_05' => 'string|max:255',
-            'g_06' => 'numeric',
+            'job_number' => 'numeric|required',
+            'job_type' => 'string|max:255|required',
+            'modality' => 'string|max:255|required',
+            'g_01' => 'string|max:255|required',
+            'g_02' => 'string|max:255|required',
+            'g_03' => 'numeric|nullable',
+            'g_04' => 'numeric|nullable',
+            'g_05' => 'string|max:255|nullable',
+            'g_06' => 'numeric|nullable',
             /* Reatail CT questions */
-            'r_ct_001' => 'string|max:255',
-            'r_ct_002' => 'string|max:255',
-            'r_ct_003' => 'string|max:255',
-            'r_ct_004' => 'string|max:255',
-            'r_ct_005' => 'string|max:255',
-            'r_ct_006' => 'string|max:255',
-            'r_ct_007' => 'string|max:255',
-            'r_ct_008' => 'string|max:255',
-            'r_ct_009' => 'string|max:255',
-            'r_ct_010' => 'string|max:255',
-            'r_ct_011' => 'string|max:255',
-            'r_ct_012' => 'numeric'
+            'r_ct_001' => 'string|max:255|nullable',
+            'r_ct_002' => 'string|max:255|nullable',
+            'r_ct_003' => 'string|max:255|nullable',
+            'r_ct_004' => 'string|max:255|nullable',
+            'r_ct_005' => 'string|max:255|nullable',
+            'r_ct_006' => 'string|max:255|nullable',
+            'r_ct_007' => 'string|max:255|nullable',
+            'r_ct_008' => 'string|max:255|nullable',
+            'r_ct_009' => 'string|max:255|nullable',
+            'r_ct_010' => 'string|max:255|nullable',
+            'r_ct_011' => 'string|max:255|nullable',
+            'r_ct_012' => 'numeric|nullable',
+            /* Inventory CT questions */
+            'i_ct_001' => 'string|max:255|nullable',
+            'i_ct_002' => 'string|max:255|nullable',
+            'i_ct_003' => 'string|max:255|nullable',
+            'i_ct_004' => 'string|max:255|nullable',
+            'i_ct_005' => 'string|max:255|nullable',
+            'i_ct_006' => 'string|max:255|nullable',
+            'i_ct_007' => 'string|max:255|nullable',
+            /* Mix CT questions */
+            'rw_ct_001' => 'string|max:255|nullable',
+            'ri_ct_002' => 'string|max:255|nullable'
         ]);
 
         $job = Job::create($storeData);
