@@ -64,12 +64,12 @@
                 <h4 class="h4">Contact Information</h4>
                 <fieldset class="row">
                     <div class="form-group col">
-                        <label for="g_03">GMID of company we are <b>buying</b> from:</label>
+                        <label for="g_03"><b>GMID</b> of company we are <b>buying</b> from:</label>
                         <input type="text" class="form-control" name="g_03">
                         </select>
                     </div>
                     <div class="form-group col">
-                        <label for="g_04">GMID of company we are <b>selling</b> to:</label>
+                        <label for="g_04"><b>GMID</b> of company we are <b>selling</b> to:</label>
                         <input type="text" class="form-control" name="g_04">
                         </select>
                     </div>
@@ -88,7 +88,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="g_06" class="form-group col" style="display: none;">
+                    <div id="g_06" class="form-group col">
                         <label for="g_06">GMID of company inspecting the equipment:</label>
                         <input type="number" class="form-control" name="g_06">
                         </select>
@@ -101,7 +101,7 @@
                     <hr>
                     <h4 class="h4">Production Information (CT-Scanner)</h4>
                     <!-- Form CT RETAIL PRODUCTION INFO Section -->
-                    <section id="RetailCT-Scanner" style="display: none;">
+                    <section id="RetailCT-Scanner">
                         <fieldset class="row">
                             <div class="form-group col">
                                 <label>Is the unit being painted?</label>
@@ -190,17 +190,17 @@
                                 <label for="r_ct_010">Will the images need to be directed to a specific PACS provider?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_y" value="Yes" onchange="showHideYesNo(value, 'cutomer_it_person_contact_info')">
+                                        <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_y" value="Yes" onchange="showHideYesNo(value, 'customer_it_person_contact_info')">
                                         <label class="form-check-label" for="r_ct_010_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_n" value="No" onchange="showHideYesNo(value, 'cutomer_it_person_contact_info')">
+                                        <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_n" value="No" onchange="showHideYesNo(value, 'customer_it_person_contact_info')">
                                         <label class="form-check-label" for="r_ct_010_n">No</label>
                                     </div>
                                 </div>
                             </div>
                         </fieldset>
-                        <section id="cutomer_it_person_contact_info" style="display: none;">
+                        <section id="customer_it_person_contact_info">
                             <label for="job_number"><u>Customer's IT person contact information:</u></label>
                             <fieldset class="row">
                                 <div class="form-group col">
@@ -236,7 +236,7 @@
                         <fieldset>
                     </section>
                     <!-- Form CT INVENTORY PRODUCTION INFO Section -->
-                    <section id="InventoryCT-Scanner" style="display: none;">
+                    <section id="InventoryCT-Scanner">
                         <fieldset class="row">
                             <div class="form-group col">
                                 <label>Is Amber deinstalling the scanner?</label>
@@ -298,7 +298,7 @@
                         </fieldset>
                     </section>
                     <!-- Form CT INVENTORY PRODUCTION INFO Section -->
-                    <section id="WholesaleCT-Scanner" style="display: none;">
+                    <section id="WholesaleCT-Scanner">
                         <fieldset class="row">
                             <div class="form-group col">
                                 <label for="rw_ct_001">Do you want an Amber employee to perform the mechanical installation?</label>
@@ -323,7 +323,7 @@
                 </section>
             </section>
             <!-- Form C-Arm PRODUCTION INFO Section -->
-            <section id="C-ArmProductionInfo" style="display: none;">
+            <section id="C-ArmProductionInfo">
                 <section class="productionInformation">
                     <hr>
                     <h4 class="h4">Production Information (C-Arm)</h4>
@@ -335,7 +335,7 @@
                 </section>
             </section>
             <!-- Form X-Rays PRODUCTION INFO Section -->
-            <section id="X-RaysProductionInfo" style="display: none;">
+            <section id="X-RaysProductionInfo">
                 <section class="productionInformation">
                     <hr>
                     <h4 class="h4">Production Information (X-Rays)</h4>

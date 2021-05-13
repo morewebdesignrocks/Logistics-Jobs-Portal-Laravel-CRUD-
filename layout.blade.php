@@ -31,6 +31,20 @@
         <link rel="stylesheet" type="text/javascript" href="{{ url('/js/app.js') }}">
         <!-- Functions thst should go in /js/app.js -->
         <script type="text/javascript">
+
+            
+            window.onload = function() {
+                let showHideElements = ["g_06", "customer_it_person_contact_info", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner", "C-ArmProductionInfo", "X-RaysProductionInfo"];
+
+                for (i = 0; i < showHideElements.length; i++) {
+                    console.log(showHideElements[i]);
+                    let elementIs = document.getElementById(showHideElements[i]);
+                    elementIs.style.display = "none";
+                    console.log(elementIs);
+                }
+            }
+
+
             function showHideYesNo(value, element) {
                 let applyShowType = document.getElementById(element);
                 if (value === "Yes") {
