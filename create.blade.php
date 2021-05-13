@@ -16,6 +16,7 @@
             </ul>
         </div>
         @endif
+        <!-- Start Form -->
         <form method="post" action="{{ route('jobs.store') }}">
             @csrf
             <!-- Form EQUIPMENT INFO Section -->
@@ -346,8 +347,6 @@
                     <h4 class="h4">Shipping Information</h4>
                 </section>
             </section>
-            
-        
             <!-- Form SUBMIT Section -->
             <section>
                 <hr>
@@ -358,6 +357,7 @@
                 </fieldset>
             </section>
         </form>
+        <!-- End Form -->
     </div>
 </div>
 @endsection
