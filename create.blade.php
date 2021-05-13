@@ -97,7 +97,7 @@
                 </fieldset>
             </section>
             <!-- Form CT PRODUCTION INFO Section -->
-            <section id="CT-ScannerProductionInfo" style="display: none;">
+            <section id="CT-ScannerProductionInfo">
                 <section class="productionInformation">
                     <hr>
                     <h4 class="h4">Production Information (CT-Scanner)</h4>

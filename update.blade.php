@@ -21,7 +21,7 @@
         <form method="post" action="{{ route('jobs.update', $job->id) }}">
         @csrf
         @method('PATCH')
-        <section>
+            <section>
                 <h4 class="h4">Equipment Information</h4>
                 <fieldset class="row">
                     <div class="form-group col">
@@ -98,7 +98,7 @@
                 </fieldset>
             </section>
             <!-- Form CT PRODUCTION INFO Section -->
-            <section id="CT-ScannerProductionInfo" style="display: none;">
+            <section id="CT-ScannerProductionInfo">
                 <section class="productionInformation">
                     <hr>
                     <h4 class="h4">Production Information (CT-Scanner)</h4>
@@ -353,7 +353,7 @@
                 <hr>
                 <fieldset class="row">
                     <div class="form-group col">
-                    <button type="submit" class="btn btn-primary">Update Job</button>
+                        <button type="submit" class="btn btn-primary">Update Job</button>
                     </div>
                 </fieldset>
             </section>
