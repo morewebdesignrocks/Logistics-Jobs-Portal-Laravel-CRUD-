@@ -32,8 +32,12 @@
         <!-- Functions thst should go in /js/app.js -->
         <script type="text/javascript">
 
-            
+            Let addNewJob = createwindow.location.href;
+            console.log(addNewJob);
+
+            /* Load function on window on load */
             window.onload = function() {
+                /* Array with elements to show/hide */
                 let showHideElements = ["g_06", "customer_it_person_contact_info", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner", "C-ArmProductionInfo", "X-RaysProductionInfo"];
 
                 for (i = 0; i < showHideElements.length; i++) {
