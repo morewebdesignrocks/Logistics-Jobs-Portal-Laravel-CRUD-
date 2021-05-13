@@ -54,14 +54,17 @@
                 }
             }
             function showHideJobType(value, element) {
+                console.log("Value is: " + value + "and the element" + element);
                 for (i = 0; i < element.length; i++) {
                     let valueSection = value + "CT-Scanner";
                     let applyShowType = document.getElementById(element[i]);
                 
                     if (valueSection === element[i]) {
+                        console.log("Show: " + element[i]);
                         applyShowType.style.display = "block"; 
                     }
                     else {
+                        console.log("Hide " + element[i]);
                         applyShowType.style.display = "none";
                     }
                 }

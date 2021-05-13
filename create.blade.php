@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group col">
                         <label for="job_type">Job type:</label>
-                        <select type="text" class="form-control" name="job_type" onchange="showHideJobType(value, ['WholesaleCT-Scanner'])">
+                        <select type="text" class="form-control" name="job_type" onchange="showHideJobType(value, ['RetailCT-Scanner', 'InventoryCT-Scanner'])">
                             <option value="">Select an option</option>
                             <option value="Wholesale">Wholesale</option>
                             <option value="Retail">Retail</option>
@@ -101,7 +101,7 @@
                     <hr>
                     <h4 class="h4">Production Information (CT-Scanner)</h4>
                     <!-- Form CT RETAIL PRODUCTION INFO Section -->
-                    <section id="WholesaleCT-Scanner" style="display: none;">
+                    <section id="RetailCT-Scanner" style="display: none;">
                         <fieldset class="row">
                             <div class="form-group col">
                                 <label>Is the unit being painted?</label>
@@ -160,7 +160,7 @@
                             </div>
                         </fieldset>
                         <fieldset class="row">
-                        <div class="form-group col">
+                            <div class="form-group col">
                                 <label for="r_ct_007">Has the customer chosen a contractor?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -219,9 +219,99 @@
                                 </div>
                             </fieldset>
                         </section>
+                        <fieldset class="row">
+                            <div class="form-group col">
+                                <label for="rw_ct_013">Do you want an Amber employee to perform the mechanical installation?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rw_ct_013" id="rw_ct_013_y" value="Yes">
+                                        <label class="form-check-label" for="rw_ct_013_y">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="rw_ct_013" id="rw_ct_013_n" value="No">
+                                        <label class="form-check-label" for="rw_ct_013_n">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </section>
+                    <!-- Form CT INVENTORY PRODUCTION INFO Section -->
+                    <section id="InventoryCT-Scanner" style="display: none;">
+                        <fieldset class="row">
+                            <div class="form-group col">
+                                <label>Is Amber deinstalling the scanner?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="r_ct_001" id="r_ct_001_y" value="Yes">
+                                        <label class="form-check-label" for="r_ct_001_01">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="r_ct_001" id="r_ct_001_n" value="No" >
+                                        <label class="form-check-label" for="r_ct_001_n">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label>Is Amber deinstalling the scanner?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_y" value="Yes">
+                                        <label class="form-check-label" for="r_ct_002_y">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_n" value="No" >
+                                        <label class="form-check-label" for="r_ct_002_n">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="row">
+                            <div class="form-group col">
+                                    <label for="r_ct_012">What floor is the scanner located?</label>
+                                    <input class="form-control" type="number" name="r_ct_012">
+                                </div>
+                            <div class="form-group col">
+                                <label>Are riggers required?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_y" value="Yes">
+                                        <label class="form-check-label" for="r_ct_002_y">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_n" value="No" >
+                                        <label class="form-check-label" for="r_ct_002_n">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <fieldset class="row">
+                            <div class="form-group col">
+                                <label>Do they have a loading dock that is dock high?</label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_y" value="Yes">
+                                        <label class="form-check-label" for="r_ct_002_y">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="r_ct_002" id="r_ct_002_n" value="No" >
+                                        <label class="form-check-label" for="r_ct_002_n">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col">
+                                <label for="r_ct_012">What hours do we have access to the scanner?</label>
+                                <input class="form-control" type="text" name="r_ct_012">
+                            </div>   
+                        </fieldset>
+                        <fieldset class="row">
+                            <div class="form-group col">
+                                <label for="r_ct_012">Any additional parts or notes for Amber's production needed?</label>
+                                <input class="form-control" type="text" name="r_ct_012">
+                            </div>   
+                        </fieldset>
                     </section>
                 </section>
-                <!-- Form   C-Arm SHIPPOING INFO Section -->
+                <!-- Form C-Arm SHIPPING INFO Section -->
                 <section class="shippingInfo">
                     <hr>
                     <h4 class="h4">Shipping Information</h4>

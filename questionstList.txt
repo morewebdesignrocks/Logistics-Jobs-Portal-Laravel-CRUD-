@@ -25,22 +25,30 @@ General question:
     g_02 = Equipment model:
     g_03 = GMID of company we are buying from:
     g_04 = GMID of company we are selling to:
-    g_05 = Is equipment going to be inspected prior to payment:
+    g_05 = Is equipment going to be inspected prior to payment: yes/no
     g_06 = GMID of company inspecting the equipment:
 
 Wholesale CT-Scanner questions:
     r_ct_001 = Is the unit being painted?
     r_ct_002 = Does it need a new tube?
-    r_ct_003 = Name of Facility to be imputed into the Machine:
-    r_ct_004 = Any additional parts or notes for Amber's production needed?
-    r_ct_005 = Is Amber providing Gamma Tech drawings?
+    r_ct_003 = Name of Facility to be imputed into the Machine?
+   *r_ct_004 = Any additional parts or notes for Amber's production needed?
+    r_ct_005 = Is Amber providing Gamma Tech drawings? yes/no
     r_ct_006 = Who is the POC in-order to obtain room dimensions?
-    r_ct_007 = Has the customer chosen a contractor?
+    r_ct_007 = Has the customer chosen a contractor? yes/no
     r_ct_008 = If yes, what is the contractor's GMID?
-    r_ct_009 = Is Amber providing training and applications for the CT Scanner?
-    r_ct_010 = Will the images need to be directed to a specific PACS provider?
+    r_ct_009 = Is Amber providing training and applications for the CT Scanner? yes/no
+    r_ct_010 = Will the images need to be directed to a specific PACS provider? yes/no
     r_ct_011 = Customer's IT person contact information: Complete Name:
     r_ct_012 = Customer's IT person contact information: Phone number:
 
-Mix Reatail and Wholesale question:
-    r_ct_013 = 
+Inventory CT-Scanner questions:
+    i_ct_001 = Is Amber deinstalling the scanner? yes/no
+    i_ct-002 = What floor is the scanner located?
+    i_ct-003 = Are riggers required? yes/no
+    i_ct-004 = Do they have a loading dock that is dock high? yes/no
+    i_ct-002 = What hours do we have access to the scanner?
+
+Mix Ratail and Wholesale question:
+    rw_ct_001 = Do you want an Amber employee to perform the mechanical installation?
+    rw_ct_002 = Any additional parts or notes for Amber's production needed?
