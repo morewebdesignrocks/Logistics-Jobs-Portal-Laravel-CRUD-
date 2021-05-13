@@ -355,16 +355,6 @@
                     </div>
                 </fieldset>
             </section>
-            <script type="text/javascript">
-                let currentURL = window.location.href;
-                if (currentURL.indexOf("jobs/") != -1) {
-
-                    console.log("We are on job update page");
-                    let showElements = ["{{ $job->modality }}", "{{ $job->job_type }}"];
-                    console.log(showElements);
-
-                }
-            </script>
         </form>
     </div>
 </div>

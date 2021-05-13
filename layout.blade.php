@@ -34,18 +34,18 @@
             /* Load function on window on load */
             window.onload = function() {
                 let currentURL = window.location.href;
+
+                /* Array with elements to show/hide */
+                let showHideElements = ["g_06", "customer_it_person_contact_info", "CT-ScannerProductionInfo", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner", "C-ArmProductionInfo", "X-RaysProductionInfo"];
+                /* Hide elements on array */
+                for (i = 0; i < showHideElements.length; i++) {
+                    let elementIs = document.getElementById(showHideElements[i]);
+                    elementIs.style.display = "none";
+                }
+
+                /* Add functionality to "Add New Job" form on create.blade.php */
                 if (currentURL.indexOf("create") != -1 ) {
                     console.log("We are on create update page");
-
-                    /* Array with elements to show/hide */
-                    let showHideElements = ["g_06", "customer_it_person_contact_info", "CT-ScannerProductionInfo", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner", "C-ArmProductionInfo", "X-RaysProductionInfo"];
-
-                    for (i = 0; i < showHideElements.length; i++) {
-                        //console.log(showHideElements[i]);
-                        let elementIs = document.getElementById(showHideElements[i]);
-                        elementIs.style.display = "none";
-                        //console.log(elementIs);
-                    }
 
                     function showHideYesNo(value, element) {
                         let applyShowType = document.getElementById(element);
@@ -70,22 +70,34 @@
                         }
                     }
                     function showHideJobType(value, element) {
-                        console.log("Value is: " + value + "and the element" + element);
+                        //console.log("Value is: " + value + "and the element" + element);
                         for (i = 0; i < element.length; i++) {
                             let valueSection = value + "CT-Scanner";
                             let applyShowType = document.getElementById(element[i]);
                         
                             if (valueSection === element[i]) {
-                                console.log("Show: " + element[i]);
+                                //console.log("Show: " + element[i]);
                                 applyShowType.style.display = "block"; 
                             }
                             else {
-                                console.log("Hide " + element[i]);
+                                //console.log("Hide " + element[i]);
                                 applyShowType.style.display = "none";
                             }
                         }
-                    } 
+                    }
+                /* Add functionality to "Update Job" form on update.blade.php */
                 } if (currentURL.indexOf("jobs/") != -1) {
+
+                    let showModality = "{{ $job->modality }}" + "ProductionInfo";
+                    let showJobType = "{{ $job->job_type }}" + "CT-Scanner";
+
+                    let showElements = [showModality, showJobType];
+                    console.log(showElements);
+
+                    for (i = 0; i < showElements.length; i++ ) {
+                        let applyShowType = document.getElementById(showElements[i]);
+                        applyShowType.style.display = "block";
+                    }
 
                 }
             }
