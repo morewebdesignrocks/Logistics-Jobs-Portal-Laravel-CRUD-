@@ -21,11 +21,11 @@
             <section>
                 <h4 class="h4">Equipment Information</h4>
                 <fieldset class="row">
-                    <div class="form-group col">
+                    <div class="form-group col-sm">
                         <label for="job_number">Job number:</label>
                         <input type="number" class="form-control" name="job_number" value="{{ $job->job_number }}">
                     </div>
-                    <div class="form-group col">
+                    <div class="form-group col-sm">
                         <label for="modality">Modality:</label>
                         <select type="text" class="form-control" name="modality" onchange="showHideModality(value, ['C-ArmProductionInfo', 'X-RaysProductionInfo', 'CT-ScannerProductionInfo'])">
                             <option value="">Select an option</option>
@@ -34,7 +34,7 @@
                             <option value="X-Rays">X-Rays</option>
                         </select>
                     </div>
-                    <div class="form-group col">
+                    <div class="form-group col-sm">
                         <label for="job_type">Job type:</label>
                         <select type="text" class="form-control" name="job_type" onchange="showHideJobType(value, ['RetailCT-Scanner', 'InventoryCT-Scanner', 'WholesaleCT-Scanner'])">
                             <option value="">Select an option</option>
@@ -45,12 +45,12 @@
                     </div>
                 </fieldset>
                 <fieldset class="row">
-                    <div class="form-group col">
+                    <div class="form-group col-sm">
                         <label for="g_01">Equipment manufacturer:</label>
                         <input type="text" class="form-control" name="g_01" value="{{ $job->g_01 }}">
                         </select>
                     </div>
-                    <div class="form-group col">
+                    <div class="form-group col-sm">
                         <label for="g_02">Equipment model:</label>
                         <input type="text" class="form-control" name="g_02" value="{{ $job->g_02 }}">
                         </select>
@@ -62,19 +62,19 @@
                 <hr>   
                 <h4 class="h4">Contact Information</h4>
                 <fieldset class="row">
-                    <div class="form-group col">
+                    <div class="form-group col-sm">
                         <label for="g_03"><b>GMID</b> of company we are <b>buying</b> from:</label>
                         <input type="text" class="form-control" name="g_03" value="{{ $job->g_03 }}">
                         </select>
                     </div>
-                    <div class="form-group col">
+                    <div class="form-group col-sm">
                         <label for="g_04"><b>GMID</b> of company we are <b>selling</b> to:</label>
                         <input type="text" class="form-control" name="g_04" value="{{ $job->g_04 }}">
                         </select>
                     </div>
                 </fieldset>
                 <fieldset class="row">
-                    <div class="form-group col">
+                    <div class="form-group col-sm">
                     <label for="g_05">Is equipment going to be inspected prior to payment:</label>
                         <div>
                             <div class="form-check form-check-inline">
@@ -87,7 +87,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="g_06" class="form-group col">
+                    <div id="g_06" class="form-group col-sm">
                         <label for="g_06">GMID of company inspecting the equipment:</label>
                         <input type="number" class="form-control" name="g_06" value="{{ $job->g_06 }}">
                         </select>
@@ -102,7 +102,7 @@
                     <!-- Form CT RETAIL PRODUCTION INFO Section -->
                     <section id="RetailCT-Scanner">
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label>Is the unit being painted?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -115,7 +115,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label>Does it need a new tube?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -128,7 +128,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="r_ct_005">Is Amber providing Gamma Tech drawings?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -143,17 +143,17 @@
                             </div>
                         </fieldset>
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="r_ct_003">Name of Facility to be imputed into the Machine:</label>
                                 <input type="text" class="form-control" name="r_ct_003" value="{{ $job->r_ct_003 }}">
                             </div>     
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="job_number">Who is the POC in-order to obtain room dimensions?</label>
                                 <input type="text" class="form-control" name="r_ct_006" value="{{ $job->r_ct_006 }}">
                             </div>
                         </fieldset>
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="r_ct_007">Has the customer chosen a contractor?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -166,13 +166,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="r_ct_008">If yes, what is the contractor's GMID?</label>
                                 <input type="text" class="form-control" name="r_ct_008" value="{{ $job->r_ct_008 }}">
                             </div>
                         </fieldset>
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="r_ct_009">Is Amber providing training and applications for the CT Scanner?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -185,7 +185,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="r_ct_010">Will the images need to be directed to a specific PACS provider?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -202,18 +202,18 @@
                         <section id="customer_it_person_contact_info">
                             <label for="job_number"><u>Customer's IT person contact information:</u></label>
                             <fieldset class="row">
-                                <div class="form-group col">
+                                <div class="form-group col-sm">
                                     <label for="r_ct_011">Complete name:</label>
                                     <input class="form-control" type="text" name="r_ct_011" value="{{ $job->r_ct_011 }}">
                                 </div>
-                                <div class="form-group col">
+                                <div class="form-group col-sm">
                                     <label for="r_ct_012">Phone number: <small>Format: 1234567890</small></label>
                                     <input class="form-control" type="tel" name="r_ct_012" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" value="{{ $job->r_ct_012 }}">
                                 </div>
                             </fieldset>
                         </section>
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="rw_ct_002">Do you want an Amber employee to perform the mechanical installation?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -228,7 +228,7 @@
                             </div>
                         </fieldset>
                         <fieldset class="row">
-                        <div class="form-group col">
+                        <div class="form-group col-sm">
                                 <label for="ri_ct_002">Any additional parts or notes for Amber's production needed?</label>
                                 <input type="text" class="form-control" name="ri_ct_002" value="{{ $job->ri_ct_002 }}">
                             </div>
@@ -237,7 +237,7 @@
                     <!-- Form CT INVENTORY PRODUCTION INFO Section -->
                     <section id="InventoryCT-Scanner">
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label>Is Amber deinstalling the scanner?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -250,13 +250,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="i_ct_002">What floor is the scanner located?</label>
                                 <input class="form-control" type="number" name="i_ct_002" value="{{ $job->i_ct_002 }}">
                             </div>
                         </fieldset>
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label>Are riggers required?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -271,7 +271,7 @@
                             </div>
                         </fieldset>
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label>Do they have a loading dock that is dock high?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -284,13 +284,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="i_ct_005">What hours do we have access to the scanner?</label>
                                 <input class="form-control" type="text" name="i_ct_005" value="{{ $job->i_ct_005 }}">
                             </div>   
                         </fieldset>
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="ri_ct_002">Any additional parts or notes for Amber's production needed?</label>
                                 <input class="form-control" type="text" name="ri_ct_002" value="{{ $job->i_ct_005 }}">
                             </div>   
@@ -299,7 +299,7 @@
                     <!-- Form CT INVENTORY PRODUCTION INFO Section -->
                     <section id="WholesaleCT-Scanner">
                         <fieldset class="row">
-                            <div class="form-group col">
+                            <div class="form-group col-sm">
                                 <label for="rw_ct_001">Do you want an Amber employee to perform the mechanical installation?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
@@ -349,7 +349,7 @@
             <section>
                 <hr>
                 <fieldset class="row">
-                    <div class="form-group col">
+                    <div class="form-group col-sm">
                         <button type="submit" class="btn btn-primary">Update Job</button>
                     </div>
                 </fieldset>
