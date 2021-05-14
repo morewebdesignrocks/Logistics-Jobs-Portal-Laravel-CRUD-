@@ -1,7 +1,7 @@
 @extends('layout')
 
 @section('content')
-<div class="card mt-5">
+<div class="card bg-light">
     <div class="card-header">
         <h3>Update Job</h3>
     </div>
@@ -350,7 +350,7 @@
                 <hr>
                 <fieldset class="row">
                     <div class="form-group col-sm">
-                        <button type="submit" class="btn btn-primary">Update Job</button>
+                        <button type="submit" class="btn btn-primary float-right">Update Job</button>
                     </div>
                 </fieldset>
             </section>

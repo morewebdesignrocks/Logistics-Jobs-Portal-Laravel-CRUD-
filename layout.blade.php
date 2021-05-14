@@ -7,23 +7,42 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <!-- Style -->
         <style>
             body {
-                max-width: 1024px;
                 margin: 0 auto;
+            }
+            .navbar-brand img {
+                max-width: 120px;
+            }
+            .navbar {
+                border-bottom: solid 3px #F29F05;
+            }
+            .card {
+                margin: 30px 16px;
+            }
+            .card-header {
+                color: #ffffff;
+                background-color: #1b4c8c;
+            }
+            footer {
+                color: #ffffff;
+                padding: 30px 16px;
+                background-color: #141414;
+                border-top: solid 3px #F29F05;
             }
         </style>
         
         <title>{{ config('app.name') }}</title>
    </head>
    <body>
-        <header class="row">
+        <header class="container">
             @include('includes.header')
         </header>
         <div class="container">
             @yield('content')
         </div>
-        <footer class="row">
+        <footer class="container">
             @include('includes.footer')
         </footer>
         <!-- JavaScript -->
@@ -47,7 +66,7 @@
 
                 /* Add functionality to "Add New Job" form on create.blade.php */
                 if (currentURL.indexOf("create") != -1 ) {
-                    console.log("We are on create page");
+                    //console.log("We are on create page");
 
                     hideElements();
 
@@ -91,7 +110,7 @@
                     }
                 /* Add functionality to "Update Job" form on update.blade.php */
                 } if (currentURL.indexOf("jobs/") != -1) {
-                    console.log("We are on update page");
+                    //console.log("We are on update page");
 
                     hideElements();
 
