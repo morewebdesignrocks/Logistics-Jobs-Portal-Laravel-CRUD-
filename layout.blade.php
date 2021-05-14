@@ -35,17 +35,21 @@
             window.onload = function() {
                 let currentURL = window.location.href;
 
-                /* Array with elements to show/hide */
-                let showHideElements = ["g_06", "customer_it_person_contact_info", "CT-ScannerProductionInfo", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner", "C-ArmProductionInfo", "X-RaysProductionInfo"];
-                /* Hide elements on array */
-                for (i = 0; i < showHideElements.length; i++) {
-                    let elementIs = document.getElementById(showHideElements[i]);
-                    elementIs.style.display = "none";
+                function hideElements() {
+                    /* Array with elements to show/hide */
+                    let showHideElements = ["g_06", "customer_it_person_contact_info", "CT-ScannerProductionInfo", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner", "C-ArmProductionInfo", "X-RaysProductionInfo"];
+                    /* Hide elements on array */
+                    for (i = 0; i < showHideElements.length; i++) {
+                        let elementIs = document.getElementById(showHideElements[i]);
+                        elementIs.style.display = "none";
+                    }
                 }
 
                 /* Add functionality to "Add New Job" form on create.blade.php */
                 if (currentURL.indexOf("create") != -1 ) {
-                    console.log("We are on create update page");
+                    console.log("We are on create page");
+
+                    hideElements();
 
                     function showHideYesNo(value, element) {
                         let applyShowType = document.getElementById(element);
@@ -87,18 +91,29 @@
                     }
                 /* Add functionality to "Update Job" form on update.blade.php */
                 } if (currentURL.indexOf("jobs/") != -1) {
+                    console.log("We are on update page");
 
-                    let showModality = "{{ $job->modality }}" + "ProductionInfo";
-                    let showJobType = "{{ $job->job_type }}" + "CT-Scanner";
+                    hideElements();
 
-                    let showElements = [showModality, showJobType];
-                    console.log(showElements);
+                    if ( "{{ $job ?? '' }}" != null ) {
+                        let showModality = "{{ $job ?? ''->modality ?? '' }}" + "ProductionInfo";
+                        let showJobType = "{{ $job ?? ''->job_type ?? '' }}" + "CT-Scanner";
 
-                    for (i = 0; i < showElements.length; i++ ) {
-                        let applyShowType = document.getElementById(showElements[i]);
-                        applyShowType.style.display = "block";
+                        let showElements = [showModality, showJobType];
+                        //console.log(showElements);
+
+                        for (i = 0; i < showElements.length; i++ ) {
+                            let applyShowType = document.getElementById(showElements[i]);
+                            applyShowType.style.display = "block";
+                        }
+
+                    } else {
+                        //Do Nothing
                     }
-
+                    
+                    
+                } else {
+                    /* Do nothing */
                 }
             }
             /* End window on load  */
