@@ -3,7 +3,7 @@
 @section('content')
 <div class="card bg-light">
     <div class="card-header">
-        <h3>Update Job</h3>
+        <h1>Update Job: {{ $job->job_number }}</h1>
     </div>
     <div class="card-body">
         @if ($errors->any())
@@ -19,11 +19,11 @@
         @csrf
         @method('PATCH')
             <section>
-                <h4 class="h4">Equipment Information</h4>
+                <h2>Equipment Information</h2>
                 <fieldset class="row">
                     <div class="form-group col-sm">
                         <label for="job_number">Job number:</label>
-                        <input type="number" class="form-control" name="job_number" value="{{ $job->job_number }}">
+                        <input type="number" class="form-control" name="job_number" value="{{ $job->job_number }}" disabled>
                     </div>
                     <div class="form-group col-sm">
                         <label for="modality">Modality:</label>
@@ -60,7 +60,7 @@
             <!-- Form EQUIPMENT INFO Section -->
             <section>
                 <hr>   
-                <h4 class="h4">Contact Information</h4>
+                <h2>Contact Information</h2>
                 <fieldset class="row">
                     <div class="form-group col-sm">
                         <label for="g_03"><b>GMID</b> of company we are <b>buying</b> from:</label>
@@ -98,7 +98,7 @@
             <section id="CT-ScannerProductionInfo">
                 <section class="productionInformation">
                     <hr>
-                    <h4 class="h4">Production Information (CT-Scanner)</h4>
+                    <h2>Production Information (CT-Scanner)</h2>
                     <!-- Form CT RETAIL PRODUCTION INFO Section -->
                     <section id="RetailCT-Scanner">
                         <fieldset class="row">
@@ -318,31 +318,31 @@
                 <!-- Form C-Arm SHIPPING INFO Section -->
                 <section class="shippingInfo">
                     <hr>
-                    <h4 class="h4">Shipping Information</h4>
+                    <h2>Shipping Information</h2>
                 </section>
             </section>
             <!-- Form C-Arm PRODUCTION INFO Section -->
             <section id="C-ArmProductionInfo">
                 <section class="productionInformation">
                     <hr>
-                    <h4 class="h4">Production Information (C-Arm)</h4>
+                    <h2>Production Information (C-Arm)</h2>
                 </section>
                 <!-- Form   C-Arm SHIPPOING INFO Section -->
                 <section class="shippingInfo">
                     <hr>
-                    <h4 class="h4">Shipping Information</h4>
+                    <h2>Shipping Information</h2>
                 </section>
             </section>
             <!-- Form X-Rays PRODUCTION INFO Section -->
             <section id="X-RaysProductionInfo">
                 <section class="productionInformation">
                     <hr>
-                    <h4 class="h4">Production Information (X-Rays)</h4>
+                    <h2>Production Information (X-Rays)</h2>
                 </section>
                 <!-- Form X-Rays SHIPPOING INFO Section -->
                 <section class="shippingInfo">
                     <hr>
-                    <h4 class="h4">Shipping Information</h4>
+                    <h2>Shipping Information</h2>
                 </section>
             </section>
             <!-- Form SUBMIT Section -->

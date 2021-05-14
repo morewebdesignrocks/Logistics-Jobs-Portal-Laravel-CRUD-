@@ -3,7 +3,7 @@
 @section('content')
 <div class="card bg-light">
   <div class="card-header">
-      <h3>Job List</h3>
+      <h1>Jobs List</h1>
   </div>
   <div class="card-body">
     <div class="mt-0">
@@ -13,7 +13,7 @@
         </div>
       @endif
       <table class="table table-sm">
-        <thead class="table-header">
+        <thead class="thead">
           <tr>
             <td scope="col"><b>Job Number:</b></td>
             <td scope="col"><b>Job Type:</b></td>

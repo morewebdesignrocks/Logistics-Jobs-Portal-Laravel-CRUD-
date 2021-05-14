@@ -12,12 +12,21 @@
             body {
                 margin: 0 auto;
             }
+            /* Font Sizing */
+            h1 {
+                font-size: 1.5em;
+            }
+            h2 {
+                font-size: 1.3em;
+            }
+            /* Nav Bar */
             .navbar-brand img {
                 max-width: 120px;
             }
             .navbar {
                 border-bottom: solid 3px #F29F05;
             }
+            /* Cards */
             .card {
                 margin: 30px 16px;
             }
@@ -25,9 +34,11 @@
                 color: #ffffff;
                 background-color: #1b4c8c;
             }
+            /* Tables */
             .table-header {
                 position: sticky;
             }
+            /* Footer */
             footer {
                 color: #ffffff;
                 padding: 30px 16px;
@@ -49,6 +60,7 @@
             @include('includes.footer')
         </footer>
         <!-- JavaScript -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" type="text/js"></script>
         <link rel="stylesheet" type="text/javascript" href="{{ url('/js/app.js') }}">
         <!-- Functions thst should go in /js/app.js -->
