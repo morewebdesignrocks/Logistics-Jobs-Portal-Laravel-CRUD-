@@ -13,12 +13,12 @@
         </div>
       @endif
       <table class="table table-sm">
-        <thead>
+        <thead class="table-header">
           <tr>
-            <td scope="col">Job Number:</td>
-            <td scope="col">Job Type:</td>
-            <td scope="col">Modality:</td>
-            <td scope="col">Action</td>
+            <td scope="col"><b>Job Number:</b></td>
+            <td scope="col"><b>Job Type:</b></td>
+            <td scope="col"><b>Modality:</b></td>
+            <td scope="col"><b>Action</b></td>
           </tr>
         </thead>
         <tbody>

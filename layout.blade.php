@@ -25,6 +25,9 @@
                 color: #ffffff;
                 background-color: #1b4c8c;
             }
+            .table-header {
+                position: sticky;
+            }
             footer {
                 color: #ffffff;
                 padding: 30px 16px;
