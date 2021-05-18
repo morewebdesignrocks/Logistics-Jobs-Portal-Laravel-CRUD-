@@ -19,12 +19,20 @@
             h2 {
                 font-size: 1.3em;
             }
+            /* Container */
+            .container {
+                padding-left: 0;
+                padding-right: 0;
+            }
             /* Nav Bar */
             .navbar-brand img {
                 max-width: 120px;
             }
             .navbar {
                 border-bottom: solid 3px #F29F05;
+            }
+            #mobile-nav-toggler {
+                display: none;
             }
             /* Cards */
             .card {
@@ -45,6 +53,12 @@
                 background-color: #141414;
                 border-top: solid 3px #F29F05;
             }
+            /* Small devices (landscape phones, less than 768px) */
+            @media (max-width: 767.98px) { 
+                #mobile-nav-toggler {
+                    display: block;
+                }
+            }
         </style>
         
         <title>{{ config('app.name') }}</title>
@@ -59,12 +73,29 @@
         <footer class="container">
             @include('includes.footer')
         </footer>
+
         <!-- JavaScript -->
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" type="text/js"></script>
+        <script src="https://kit.fontawesome.com/aa7ee88283.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" type="text/javascript" href="{{ url('/js/app.js') }}">
+        
         <!-- Functions thst should go in /js/app.js -->
         <script type="text/javascript">
+            /* jQuery Testing */
+            $(document).ready(function () {
+                $(".navbar").css('background-color', '#f1f1f1');
+
+                $('#mobile-nav-toggler').click(function(event) {
+                    console.log("click is working");
+
+                    $(".navbar-collapse").toggleClass('collapse');
+
+
+                });
+            });
+
+
             /* Load function on window on load */
             window.onload = function() {
                 let currentURL = window.location.href;
