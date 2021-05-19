@@ -33,6 +33,11 @@
             }
             #mobile-nav-toggler {
                 display: none;
+                border: none;
+                border-radius: 2px;
+                background-color: #0d1f61;
+                padding: 5px 7px;
+                color: #fff;
             }
             /* Cards */
             .card {
@@ -53,8 +58,9 @@
                 background-color: #141414;
                 border-top: solid 3px #F29F05;
             }
-            /* Small devices (landscape phones, less than 768px) */
-            @media (max-width: 767.98px) { 
+            /* ===== MEDIA QUERIES ===== */
+            /* Medium devices (tablets, less than 992px) */
+            @media (max-width: 991.98px) { 
                 #mobile-nav-toggler {
                     display: block;
                 }
@@ -83,6 +89,7 @@
         <!-- Functions thst should go in /js/app.js -->
         <script type="text/javascript">
             /* jQuery Testing */
+            /*
             $(document).ready(function () {
                 $(".navbar").css('background-color', '#f1f1f1');
 
@@ -94,10 +101,43 @@
 
                 });
             });
-
+            */
 
             /* Load function on window on load */
             window.onload = function() {
+
+                /* Menu toggle */
+                console.log("js toggle is runnng");
+                let toggleHamburger = document.getElementById("mobile-nav-toggler");
+                let toggleMenu = document.getElementById("mobile-nav-content");
+    
+                toggleHamburger.addEventListener("click", hasClass);
+
+                function hasClass() {
+                    if(toggleMenu.classList.contains("collapse")) {
+                        console.log("Collapse is present");
+                        toggleMenu.classList.remove("collapse");
+                    } else {
+                        console.log("Collapse is NOT present");
+                        toggleMenu.classList.add("collapse");
+                    }
+
+
+                    /*
+                    if (toggleMenu.matches(".collapse")) {
+                        console.log("Collapse is present");
+                    } else {
+                        console.log("Collapse is NOT present");
+                    }
+                    */
+                }
+
+
+
+
+
+
+
                 let currentURL = window.location.href;
 
                 function hideElements() {
@@ -112,7 +152,7 @@
 
                 /* Add functionality to "Add New Job" form on create.blade.php */
                 if (currentURL.indexOf("create") != -1 ) {
-                    //console.log("We are on create page");
+                    console.log("We are on create page");
 
                     hideElements();
 
