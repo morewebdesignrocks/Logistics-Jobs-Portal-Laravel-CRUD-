@@ -30,7 +30,7 @@
                         </div>
                         <div class="form-group col-sm">
                             <label for="modality">Modality:</label>
-                            <select type="text" class="form-control" name="modality" onchange="showHideModality(value, ['C-ArmProductionInfo', 'X-RaysProductionInfo', 'CT-ScannerProductionInfo'])">
+                            <select type="text" id="modality-selector" class="form-control" name="modality">
                                 <option value="">Select an option</option>
                                 <option value="CT-Scanner">CT-Scanner</option>
                                 <option value="C-Arm">C-Arm</option>
@@ -39,7 +39,7 @@
                         </div>
                         <div class="form-group col-sm">
                             <label for="job_type">Job type:</label>
-                            <select type="text" class="form-control" name="job_type" onchange="showHideJobType(value, ['RetailCT-Scanner', 'InventoryCT-Scanner', 'WholesaleCT-Scanner'])">
+                            <select type="text" id="job-type-selector" class="form-control" name="job_type">
                                 <option value="">Select an option</option>
                                 <option value="Wholesale">Wholesale</option>
                                 <option value="Retail">Retail</option>
@@ -98,7 +98,7 @@
                     </fieldset>
                 </section>
                 <!-- Form CT PRODUCTION INFO Section -->
-                <section id="CT-ScannerProductionInfo">
+                <section id="CT-Scanner">
                     <section class="productionInformation">
                         <hr>
                         <h2>Production Information (CT-Scanner)</h2>

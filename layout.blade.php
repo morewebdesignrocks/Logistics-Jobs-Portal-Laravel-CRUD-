@@ -256,12 +256,12 @@
                     }
                 }
 
-
+                /* Get current URL */
                 let currentURL = window.location.href;
+                /* Array with elements to show/hide */
+                let showHideElements = ["g_06", "customer_it_person_contact_info", "CT-Scanner", "C-ArmProductionInfo", "X-RaysProductionInfo", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner"];
 
-                function hideElements() {
-                    /* Array with elements to show/hide */
-                    let showHideElements = ["g_06", "customer_it_person_contact_info", "CT-ScannerProductionInfo", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner", "C-ArmProductionInfo", "X-RaysProductionInfo"];
+                function hideElements() {                   
                     /* Hide elements on array */
                     for (i = 0; i < showHideElements.length; i++) {
                         let elementIs = document.getElementById(showHideElements[i]);
@@ -275,6 +275,31 @@
 
                     hideElements();
 
+                    let selector = ["modality-selector", "job-type-selector"];
+                   
+                    for (i = 0; i < selector.length; i++) {
+                        let selectorChanged = selector[i];
+                        let selectedSelector = document.getElementById(selector[i]);
+
+                        function identifyValue() { 
+                            let selectedValue = selectedSelector.options[selectedSelector.selectedIndex].value;
+                            
+                            for (i = 0; i < showHideElements.length; i++) {
+                                
+                                if (showHideElements[i] === selectedValue) {
+                                    document.getElementById(showHideElements[i]).style.display = "block"; 
+                                } 
+                                else {
+                                    document.getElementById(showHideElements[i]).style.display = "none";    
+                                }
+
+                            }
+                        }
+
+                        selectedSelector.addEventListener("change", identifyValue);
+                          
+                    }
+
                     function showHideYesNo(value, element) {
                         let applyShowType = document.getElementById(element);
                         if (value === "Yes") {
@@ -284,19 +309,7 @@
                             applyShowType.style.display = "none";
                         }
                     }   
-                    function showHideModality(value, element) {
-                        for (i = 0; i < element.length; i++) {
-                            let valueSection = value + "ProductionInfo";
-                            let applyShowType = document.getElementById(element[i]);
-                        
-                            if (valueSection === element[i]) {
-                                applyShowType.style.display = "block"; 
-                            }
-                            else {
-                                applyShowType.style.display = "none";
-                            }
-                        }
-                    }
+                    
                     function showHideJobType(value, element) {
                         //console.log("Value is: " + value + "and the element" + element);
                         for (i = 0; i < element.length; i++) {
@@ -313,6 +326,7 @@
                             }
                         }
                     }
+                
                 /* Add functionality to "Update Job" form on update.blade.php */
                 } if (currentURL.indexOf("jobs/") != -1) {
                     //console.log("We are on update page");
@@ -334,8 +348,7 @@
                     } else {
                         //Do Nothing
                     }
-                    
-                    
+                      
                 } else {
                     /* Do nothing */
                 }
