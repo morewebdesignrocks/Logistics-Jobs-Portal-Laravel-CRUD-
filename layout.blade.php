@@ -259,7 +259,7 @@
                 /* Get current URL */
                 let currentURL = window.location.href;
                 /* Array with elements to show/hide */
-                let showHideElements = ["g_06", "customer_it_person_contact_info", "CT-Scanner", "C-ArmProductionInfo", "X-RaysProductionInfo", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner"];
+                let showHideElements = ["g_06", "customer_it_person_contact_info", "CT-Scanner", "C-Arm", "X-Rays", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner"];
 
                 function hideElements() {                   
                     /* Hide elements on array */
@@ -273,15 +273,17 @@
                 if (currentURL.indexOf("create") != -1 ) {
                     console.log("We are on create page");
 
+                    // Calls hide elements function
                     hideElements();
-
+                    // Selector elements array
                     let selector = ["modality-selector", "job-type-selector"];
-                   
+                    // Go over selectors and get elements
                     for (i = 0; i < selector.length; i++) {
                         let selectorChanged = selector[i];
                         let selectedSelector = document.getElementById(selector[i]);
 
-                        function identifyValue() { 
+                        // Get value of selection on select elements. Show/hide those elements
+                        function showHideAction() { 
                             let selectedValue = selectedSelector.options[selectedSelector.selectedIndex].value;
                             
                             for (i = 0; i < showHideElements.length; i++) {
@@ -292,11 +294,10 @@
                                 else {
                                     document.getElementById(showHideElements[i]).style.display = "none";    
                                 }
-
                             }
                         }
-
-                        selectedSelector.addEventListener("change", identifyValue);
+                        // When change is noticed on select elements, call identify values
+                        selectedSelector.addEventListener("change", showHideAction);
                           
                     }
 

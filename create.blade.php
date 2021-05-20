@@ -325,7 +325,7 @@
                     </section>
                 </section>
                 <!-- Form C-Arm PRODUCTION INFO Section -->
-                <section id="C-ArmProductionInfo">
+                <section id="C-Arm">
                     <section class="productionInformation">
                         <hr>
                         <h2>Production Information (C-Arm)</h2>
@@ -337,7 +337,7 @@
                     </section>
                 </section>
                 <!-- Form X-Rays PRODUCTION INFO Section -->
-                <section id="X-RaysProductionInfo">
+                <section id="X-Rays">
                     <section class="productionInformation">
                         <hr>
                         <h2>Production Information (X-Rays)</h2>
