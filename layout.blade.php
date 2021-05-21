@@ -258,8 +258,9 @@
 
                 /* Get current URL */
                 let currentURL = window.location.href;
+                
                 /* Array with elements to show/hide */
-                let modalityElements = ["X-Rays", "CT-Scanner", "C-Arm"];
+                let modalityElements = ["CT-Scanner", "C-Arm", "X-Rays"];
                 let jobTypeElements = ["rCT-Scanner", "iCT-Scanner", "wCT-Scanner", "customer_it_person_contact_info"]
 
                 /* Hide Elements by adding CSS style display:none */
@@ -271,15 +272,6 @@
                     }
                 }
 
-                /* show Elements by adding CSS style display:block */
-                function showElements(hideElements) {                   
-                    for (i = 0; i < hideElements.length; i++) {
-                        console.log("Hiding: " + hideElements[i]);
-                        let elementIs = document.getElementById(hideElements[i]);
-                        elementIs.style.display = "block";
-                    }
-                }
-
                 /* Add functionality to "Add New Job" form on create.blade.php */
                 if (currentURL.indexOf("create") != -1 ) {
                     console.log("We are on create page");
@@ -287,55 +279,55 @@
                     // Calls hide elements function
                     hideElements(modalityElements);
                     hideElements(jobTypeElements);
-                    // Selector elements array
-                    let selector = ["modality-selector", "job-type-selector"];
-                    // Go over selectors and get elements
-                    for (i = 0; i < selector.length; i++) {
-                        let selectorChanged = selector[i];
-                        let selectedSelector = document.getElementById(selector[i]);
-                        console.log("Selector " + ( i+1 ) + ": " + selector[i]);
 
-                        // Get value of selection on select elements. Show/hide those elements
-                        function showHideElementsAction() { 
+                    function showHideModalities() {
+
+                        let getSelector = document.getElementById("modality-selector");
+                        let getSelectorValue = getSelector.options[getSelector.selectedIndex].value;
+
+                        for (i = 0; i < modalityElements.length; i++ ) {
                             
-                            let selectedValue = selectedSelector.options[selectedSelector.selectedIndex].value;
-                            console.log("this is the selected value: " + selectedSelector.options[selectedSelector.selectedIndex].value);
-                            
-                            
-                            for ( i = 0; i < a.length; i++) {
-                                if (selectedValue === modalityElements[i]) {
-                                    console.log("Selected value matches modality");
-                                } 
-                                else if (selectedValue === jobTypeElements[i]) {
-                                    console.log("Selected value matched job type");
-                                } 
-                                else {
-                                    console.log("There is no match");
-                                }
+                            let changeDisplayElement = document.getElementById(modalityElements[i]);
+                            console.log(changeDisplayElement);
+
+                            if ( getSelectorValue === modalityElements[i] ) {
+                                console.log(getSelectorValue + " " + changeDisplayElement + " There is a match");
+                                changeDisplayElement.style.display = "block"
                             }
-                        
+                             else {
+                                console.log(getSelectorValue + " " + changeDisplayElement + " There is no match");
+                                changeDisplayElement.style.display = "none"
+
+                            }
                         }
-                        // When change is noticed on select elements, call identify values
-                        selectedSelector.addEventListener("change", showHideElementsAction);
-                          
                     }
 
-                    function showHideJobType(value, element) {
-                        //console.log("Value is: " + value + "and the element" + element);
-                        for (i = 0; i < element.length; i++) {
-                            let valueSection = value + "CT-Scanner";
-                            let applyShowType = document.getElementById(element[i]);
-                        
-                            if (valueSection === element[i]) {
-                                //console.log("Show: " + element[i]);
-                                applyShowType.style.display = "block"; 
+                    function showHideJobType() {
+
+                        let getSelector = document.getElementById("job-type-selector");
+                        let getSelectorValue = getSelector.options[getSelector.selectedIndex].value;
+
+                        for (i = 0; i < jobTypeElements.length; i++ ) {
+                            
+                            let changeDisplayElement = document.getElementById(jobTypeElements[i]);
+                            console.log(changeDisplayElement);
+
+                            if ( getSelectorValue === jobTypeElements[i] ) {
+                                console.log(getSelectorValue + " " + changeDisplayElement + " There is a match");
+                                changeDisplayElement.style.display = "block"
                             }
                             else {
-                                //console.log("Hide " + element[i]);
-                                applyShowType.style.display = "none";
+                                console.log(getSelectorValue + " " + changeDisplayElement + " There is no match");
+                                changeDisplayElement.style.display = "none"
+
                             }
                         }
                     }
+
+                    // When change is noticed on select elements, call identify values
+                    document.getElementById("modality-selector").addEventListener("change", showHideModalities);
+                    document.getElementById("job-type-selector").addEventListener("change", showHideJobType);
+
 
                     function showHideYesNo(value, element) {
                         let applyShowType = document.getElementById(element);
@@ -349,7 +341,7 @@
                                                   
                 /* Add functionality to "Update Job" form on update.blade.php */
                 } if (currentURL.indexOf("jobs/") != -1) {
-                    //console.log("We are on update page");
+                    console.log("We are on update page");
 
                     hideElements(showHideModality);
 
@@ -373,7 +365,7 @@
                     /* Do nothing */
                 }
             }
-            /* End window on load  */
+            /* End window onload  */
             
         </script>
    </body>
