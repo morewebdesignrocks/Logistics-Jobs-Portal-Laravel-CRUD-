@@ -78,7 +78,7 @@
                     </fieldset>
                     <fieldset class="row">
                         <div class="form-group col-sm">
-                        <label for="g_05">Is equipment going to be inspected prior to payment:</label>
+                        <label for="g_05">Is the equipment going to be inspected prior to payment:</label>
                             <div>
                                 <div class="form-check form-check-inline">
                                     <input class="form-check-input" type="radio" name="g_05" id="g_05_y" value="Yes" onchange="showHideYesNo(value, 'g_06')">
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                         <div id="g_06" class="form-group col-sm">
-                            <label for="g_06">GMID of company inspecting the equipment:</label>
+                            <label for="g_06">If yes, what is the GMID of company inspecting the equipment:</label>
                             <input type="number" class="form-control" name="g_06">
                             </select>
                         </div>
@@ -103,7 +103,7 @@
                         <hr>
                         <h2>Production Information (CT-Scanner)</h2>
                         <!-- Form CT RETAIL PRODUCTION INFO Section -->
-                        <section id="RetailCT-Scanner">
+                        <section id="rCT-Scanner">
                             <fieldset class="row">
                                 <div class="form-group col-sm">
                                     <label>Is the unit being painted?</label>
@@ -238,7 +238,7 @@
                             <fieldset>
                         </section>
                         <!-- Form CT INVENTORY PRODUCTION INFO Section -->
-                        <section id="InventoryCT-Scanner">
+                        <section id="iCT-Scanner">
                             <fieldset class="row">
                                 <div class="form-group col-sm">
                                     <label>Is Amber deinstalling the scanner?</label>
@@ -300,7 +300,7 @@
                             </fieldset>
                         </section>
                         <!-- Form CT INVENTORY PRODUCTION INFO Section -->
-                        <section id="WholesaleCT-Scanner">
+                        <section id="wCT-Scanner">
                             <fieldset class="row">
                                 <div class="form-group col-sm">
                                     <label for="rw_ct_001">Do you want an Amber employee to perform the mechanical installation?</label>
