@@ -259,13 +259,24 @@
                 /* Get current URL */
                 let currentURL = window.location.href;
                 /* Array with elements to show/hide */
-                let showHideElements = ["g_06", "customer_it_person_contact_info", "CT-Scanner", "C-Arm", "X-Rays", "RetailCT-Scanner", "InventoryCT-Scanner", "WholesaleCT-Scanner"];
+                let modalityElements = ["X-Rays", "CT-Scanner", "C-Arm"];
+                let jobTypeElements = ["rCT-Scanner", "iCT-Scanner", "wCT-Scanner", "customer_it_person_contact_info"]
 
-                function hideElements() {                   
-                    /* Hide elements on array */
-                    for (i = 0; i < showHideElements.length; i++) {
-                        let elementIs = document.getElementById(showHideElements[i]);
+                /* Hide Elements by adding CSS style display:none */
+                function hideElements(hideElements) {                   
+                    for (i = 0; i < hideElements.length; i++) {
+                        console.log("Hiding: " + hideElements[i]);
+                        let elementIs = document.getElementById(hideElements[i]);
                         elementIs.style.display = "none";
+                    }
+                }
+
+                /* show Elements by adding CSS style display:block */
+                function showElements(hideElements) {                   
+                    for (i = 0; i < hideElements.length; i++) {
+                        console.log("Hiding: " + hideElements[i]);
+                        let elementIs = document.getElementById(hideElements[i]);
+                        elementIs.style.display = "block";
                     }
                 }
 
@@ -274,43 +285,41 @@
                     console.log("We are on create page");
 
                     // Calls hide elements function
-                    hideElements();
+                    hideElements(modalityElements);
+                    hideElements(jobTypeElements);
                     // Selector elements array
                     let selector = ["modality-selector", "job-type-selector"];
                     // Go over selectors and get elements
                     for (i = 0; i < selector.length; i++) {
                         let selectorChanged = selector[i];
                         let selectedSelector = document.getElementById(selector[i]);
+                        console.log("Selector " + ( i+1 ) + ": " + selector[i]);
 
                         // Get value of selection on select elements. Show/hide those elements
-                        function showHideAction() { 
-                            let selectedValue = selectedSelector.options[selectedSelector.selectedIndex].value;
+                        function showHideElementsAction() { 
                             
-                            for (i = 0; i < showHideElements.length; i++) {
-                                
-                                if (showHideElements[i] === selectedValue) {
-                                    document.getElementById(showHideElements[i]).style.display = "block"; 
+                            let selectedValue = selectedSelector.options[selectedSelector.selectedIndex].value;
+                            console.log("this is the selected value: " + selectedSelector.options[selectedSelector.selectedIndex].value);
+                            
+                            
+                            for ( i = 0; i < a.length; i++) {
+                                if (selectedValue === modalityElements[i]) {
+                                    console.log("Selected value matches modality");
+                                } 
+                                else if (selectedValue === jobTypeElements[i]) {
+                                    console.log("Selected value matched job type");
                                 } 
                                 else {
-                                    document.getElementById(showHideElements[i]).style.display = "none";    
+                                    console.log("There is no match");
                                 }
                             }
+                        
                         }
                         // When change is noticed on select elements, call identify values
-                        selectedSelector.addEventListener("change", showHideAction);
+                        selectedSelector.addEventListener("change", showHideElementsAction);
                           
                     }
 
-                    function showHideYesNo(value, element) {
-                        let applyShowType = document.getElementById(element);
-                        if (value === "Yes") {
-                            applyShowType.style.display = "block"; 
-                        }
-                        else {
-                            applyShowType.style.display = "none";
-                        }
-                    }   
-                    
                     function showHideJobType(value, element) {
                         //console.log("Value is: " + value + "and the element" + element);
                         for (i = 0; i < element.length; i++) {
@@ -327,12 +336,22 @@
                             }
                         }
                     }
-                
+
+                    function showHideYesNo(value, element) {
+                        let applyShowType = document.getElementById(element);
+                        if (value === "Yes") {
+                            applyShowType.style.display = "block"; 
+                        }
+                        else {
+                            applyShowType.style.display = "none";
+                        }
+                    }   
+                                                  
                 /* Add functionality to "Update Job" form on update.blade.php */
                 } if (currentURL.indexOf("jobs/") != -1) {
                     //console.log("We are on update page");
 
-                    hideElements();
+                    hideElements(showHideModality);
 
                     if ( "{{ $job ?? '' }}" != null ) {
                         let showModality = "{{ $job ?? ''->modality ?? '' }}" + "ProductionInfo";
