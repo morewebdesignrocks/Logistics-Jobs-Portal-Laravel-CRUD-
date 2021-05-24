@@ -103,7 +103,7 @@
                         <hr>
                         <h2>Production Information (CT-Scanner)</h2>
                         <!-- Form CT RETAIL PRODUCTION INFO Section -->
-                        <section id="rCT-Scanner">
+                        <section id="CT-ScannerRetail" class="Retail">
                             <fieldset class="row">
                                 <div class="form-group col-sm">
                                     <label>Is the unit being painted?</label>
@@ -238,7 +238,7 @@
                             <fieldset>
                         </section>
                         <!-- Form CT INVENTORY PRODUCTION INFO Section -->
-                        <section id="iCT-Scanner">
+                        <section id="CT-ScannerInventory" class="Inventory">
                             <fieldset class="row">
                                 <div class="form-group col-sm">
                                     <label>Is Amber deinstalling the scanner?</label>
@@ -300,7 +300,7 @@
                             </fieldset>
                         </section>
                         <!-- Form CT INVENTORY PRODUCTION INFO Section -->
-                        <section id="wCT-Scanner">
+                        <section id="CT-ScannerWholesale" class="Wholesale">
                             <fieldset class="row">
                                 <div class="form-group col-sm">
                                     <label for="rw_ct_001">Do you want an Amber employee to perform the mechanical installation?</label>

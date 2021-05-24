@@ -261,12 +261,13 @@
                 
                 /* Array with elements to show/hide */
                 let modalityElements = ["CT-Scanner", "C-Arm", "X-Rays"];
-                let jobTypeElements = ["rCT-Scanner", "iCT-Scanner", "wCT-Scanner", "customer_it_person_contact_info"]
+                let jobTypeElements = ["CT-ScannerWholesale", "CT-ScannerRetail", "CT-ScannerInventory"]
+                let jobTypeElementsClass = ["Retail", "Wholesale", "Inventory"];
 
                 /* Hide Elements by adding CSS style display:none */
                 function hideElements(hideElements) {                   
                     for (i = 0; i < hideElements.length; i++) {
-                        console.log("Hiding: " + hideElements[i]);
+                        //console.log("Hiding: " + hideElements[i]);
                         let elementIs = document.getElementById(hideElements[i]);
                         elementIs.style.display = "none";
                     }
@@ -288,14 +289,14 @@
                         for (i = 0; i < modalityElements.length; i++ ) {
                             
                             let changeDisplayElement = document.getElementById(modalityElements[i]);
-                            console.log(changeDisplayElement);
+                            //console.log(changeDisplayElement);
 
                             if ( getSelectorValue === modalityElements[i] ) {
-                                console.log(getSelectorValue + " " + changeDisplayElement + " There is a match");
+                                //console.log(getSelectorValue + " " + changeDisplayElement + " There is a match");
                                 changeDisplayElement.style.display = "block"
                             }
                              else {
-                                console.log(getSelectorValue + " " + changeDisplayElement + " There is no match");
+                                //console.log(getSelectorValue + " " + changeDisplayElement + " There is no match");
                                 changeDisplayElement.style.display = "none"
 
                             }
@@ -303,7 +304,47 @@
                     }
 
                     function showHideJobType() {
+                        
+                        // Get selector and its value
+                        let getSelector = document.getElementById("job-type-selector");
+                        let getSelectorValue = getSelector.options[getSelector.selectedIndex].value;
+                        console.log("Selected value: " + getSelectorValue);
+                        
+                        // loop through array
+                        for ( i = 0; i < jobTypeElementsClass.length; i++ ) {
 
+                            //console.log(jobTypeElementsClass[i]);
+                            //let changeElementsDisplay = document.getElementsByClassName(jobTypeElementsClass[i]);
+                            //console.log(changeElementsDisplay)
+
+                            
+                            if ( getSelectorValue === jobTypeElementsClass[i]) {
+                                //console.log("There is a match on job type");
+                                //console.log(jobTypeElementsClass[i]);
+                                let changeElementsDisplay = document.getElementsByClassName(jobTypeElementsClass[i]);
+                                //console.log(changeElementsDisplay);
+
+                                for ( i = 0; i < changeElementsDisplay.length; i++ ) {
+                                    //console.log(changeElementsDisplay[i]);
+                                    changeElementsDisplay[i].style.display = "block"
+                                }
+                            } else {
+                                console.log("There is no match on job type");
+                                //console.log("There is a match on job type");
+                                //console.log(jobTypeElementsClass[i]);
+                                let changeElementsDisplay = document.getElementsByClassName(jobTypeElementsClass[i]);
+                                //console.log(changeElementsDisplay);
+
+                                for ( i = 0; i < changeElementsDisplay.length; i++ ) {
+                                    //console.log(changeElementsDisplay[i]);
+                                    changeElementsDisplay[i].style.display = "none";
+                                    break;
+                                }
+                                
+                            }
+                            
+                        }
+                        /*
                         let getSelector = document.getElementById("job-type-selector");
                         let getSelectorValue = getSelector.options[getSelector.selectedIndex].value;
 
@@ -313,21 +354,20 @@
                             console.log(changeDisplayElement);
 
                             if ( getSelectorValue === jobTypeElements[i] ) {
-                                console.log(getSelectorValue + " " + changeDisplayElement + " There is a match");
+                                console.log(getSelectorValue + " " + jobTypeElements[i] + " There is a match");
                                 changeDisplayElement.style.display = "block"
                             }
-                            else {
-                                console.log(getSelectorValue + " " + changeDisplayElement + " There is no match");
+                             else {
+                                console.log(getSelectorValue + " " + jobTypeElements[i] + " There is no match");
                                 changeDisplayElement.style.display = "none"
-
                             }
                         }
+                        */
                     }
 
                     // When change is noticed on select elements, call identify values
                     document.getElementById("modality-selector").addEventListener("change", showHideModalities);
                     document.getElementById("job-type-selector").addEventListener("change", showHideJobType);
-
 
                     function showHideYesNo(value, element) {
                         let applyShowType = document.getElementById(element);
