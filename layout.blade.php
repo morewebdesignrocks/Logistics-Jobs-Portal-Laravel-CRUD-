@@ -346,13 +346,11 @@
                     hideElements(jobTypeElements);
 
                     if ( "{{ $job ?? '' }}" != null ) {
-                        let showModality = "{{ $job ?? ''->modality ?? '' }}" + "ProductionInfo";
-                        let showJobType = "{{ $job ?? ''->job_type ?? '' }}" + "CT-Scanner";
-
+                        let showModality = "{{ $job->modality ?? '' }}";
+                        let showJobType = "{{ $job->modality ?? '' }}" + "{{ $job->job_type ?? '' }}";
                         let showElements = [showModality, showJobType];
-                        //console.log(showElements);
 
-                        for (i = 0; i < showElements.length; i++ ) {
+                        for ( i = 0; i < showElements.length; i++ ) {
                             let applyShowType = document.getElementById(showElements[i]);
                             applyShowType.style.display = "block";
                         }

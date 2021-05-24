@@ -27,8 +27,8 @@
                     </div>
                     <div class="form-group col-sm">
                         <label for="modality">Modality:</label>
-                        <select type="text" class="form-control" name="modality" onchange="showHideModality(value, ['C-ArmProductionInfo', 'X-RaysProductionInfo', 'CT-ScannerProductionInfo'])">
-                            <option value="">Select an option</option>
+                        <select type="text" class="form-control" name="modality">
+                        <option value="">Select an option</option>
                             <option value="CT-Scanner">CT-Scanner</option>
                             <option value="C-Arm">C-Arm</option>
                             <option value="X-Rays">X-Rays</option>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group col-sm">
                         <label for="job_type">Job type:</label>
-                        <select type="text" class="form-control" name="job_type" onchange="showHideJobType(value, ['RetailCT-Scanner', 'InventoryCT-Scanner', 'WholesaleCT-Scanner'])">
+                        <select type="text" class="form-control" name="job_type">
                             <option value="">Select an option</option>
                             <option value="Wholesale">Wholesale</option>
                             <option value="Retail">Retail</option>
@@ -78,11 +78,11 @@
                     <label for="g_05">Is equipment going to be inspected prior to payment:</label>
                         <div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="g_05" id="g_05_y" value="{{ $job->g_05 }}" onchange="showHideYesNo(value, 'g_06')" >
+                                <input class="form-check-input" type="radio" name="g_05" id="g_05_y" value="{{ $job->g_05 }}">
                                 <label class="form-check-label" for="g_05_y">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="g_05" id="g_05_n" value="{{ $job->g_05 }}" onchange="showHideYesNo(value, 'g_06')">
+                                <input class="form-check-input" type="radio" name="g_05" id="g_05_n" value="{{ $job->g_05 }}">
                                 <label class="form-check-label" for="g_05_n">No</label>
                             </div>
                         </div>
@@ -95,12 +95,12 @@
                 </fieldset>
             </section>
             <!-- Form CT PRODUCTION INFO Section -->
-            <section id="CT-ScannerProductionInfo">
+            <section id="CT-Scanner">
                 <section class="productionInformation">
                     <hr>
                     <h2>Production Information (CT-Scanner)</h2>
                     <!-- Form CT RETAIL PRODUCTION INFO Section -->
-                    <section id="RetailCT-Scanner">
+                    <section id="CT-ScannerRetail" class="Retail">
                         <fieldset class="row">
                             <div class="form-group col-sm">
                                 <label>Is the unit being painted?</label>
@@ -189,11 +189,11 @@
                                 <label for="r_ct_010">Will the images need to be directed to a specific PACS provider?</label>
                                 <div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_y" value="Yes" onchange="showHideYesNo(value, 'customer_it_person_contact_info')">
+                                        <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_y" value="Yes">
                                         <label class="form-check-label" for="r_ct_010_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_n" value="No" onchange="showHideYesNo(value, 'customer_it_person_contact_info')">
+                                        <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_n" value="No">
                                         <label class="form-check-label" for="r_ct_010_n">No</label>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
                         <fieldset>
                     </section>
                     <!-- Form CT INVENTORY PRODUCTION INFO Section -->
-                    <section id="InventoryCT-Scanner">
+                    <section id="CT-ScannerInventory" class="Inventory">
                         <fieldset class="row">
                             <div class="form-group col-sm">
                                 <label>Is Amber deinstalling the scanner?</label>
@@ -297,7 +297,7 @@
                         </fieldset>
                     </section>
                     <!-- Form CT INVENTORY PRODUCTION INFO Section -->
-                    <section id="WholesaleCT-Scanner">
+                    <section id="CT-ScannerWholesale" class="Wholesale">
                         <fieldset class="row">
                             <div class="form-group col-sm">
                                 <label for="rw_ct_001">Do you want an Amber employee to perform the mechanical installation?</label>
@@ -322,7 +322,7 @@
                 </section>
             </section>
             <!-- Form C-Arm PRODUCTION INFO Section -->
-            <section id="C-ArmProductionInfo">
+            <section id="C-Arm">
                 <section class="productionInformation">
                     <hr>
                     <h2>Production Information (C-Arm)</h2>
@@ -334,7 +334,7 @@
                 </section>
             </section>
             <!-- Form X-Rays PRODUCTION INFO Section -->
-            <section id="X-RaysProductionInfo">
+            <section id="X-Rays">
                 <section class="productionInformation">
                     <hr>
                     <h2>Production Information (X-Rays)</h2>
