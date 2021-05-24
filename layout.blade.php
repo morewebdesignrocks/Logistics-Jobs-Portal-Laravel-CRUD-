@@ -281,6 +281,7 @@
                     hideElements(modalityElements);
                     hideElements(jobTypeElements);
 
+                    /* Show/Hide sections by modality */
                     function showHideModalities() {
 
                         let getSelector = document.getElementById("modality-selector");
@@ -289,80 +290,37 @@
                         for (i = 0; i < modalityElements.length; i++ ) {
                             
                             let changeDisplayElement = document.getElementById(modalityElements[i]);
-                            //console.log(changeDisplayElement);
 
                             if ( getSelectorValue === modalityElements[i] ) {
-                                //console.log(getSelectorValue + " " + changeDisplayElement + " There is a match");
                                 changeDisplayElement.style.display = "block"
                             }
                              else {
-                                //console.log(getSelectorValue + " " + changeDisplayElement + " There is no match");
                                 changeDisplayElement.style.display = "none"
-
                             }
                         }
                     }
 
+                    /* Show/Hide sections by job type */
                     function showHideJobType() {
                         
                         // Get selector and its value
                         let getSelector = document.getElementById("job-type-selector");
                         let getSelectorValue = getSelector.options[getSelector.selectedIndex].value;
-                        console.log("Selected value: " + getSelectorValue);
                         
-                        // loop through array
-                        for ( i = 0; i < jobTypeElementsClass.length; i++ ) {
+                        for ( i = 0; i < modalityElements.length; i++ ) {
+                            let selectorValueCompleteId = modalityElements[i] + getSelectorValue;
 
-                            //console.log(jobTypeElementsClass[i]);
-                            //let changeElementsDisplay = document.getElementsByClassName(jobTypeElementsClass[i]);
-                            //console.log(changeElementsDisplay)
+                            for ( i = 0; i < jobTypeElements.length; i++ ) {
+                                let changeElementsDisplay = document.getElementById(jobTypeElements[i]);
 
-                            
-                            if ( getSelectorValue === jobTypeElementsClass[i]) {
-                                //console.log("There is a match on job type");
-                                //console.log(jobTypeElementsClass[i]);
-                                let changeElementsDisplay = document.getElementsByClassName(jobTypeElementsClass[i]);
-                                //console.log(changeElementsDisplay);
-
-                                for ( i = 0; i < changeElementsDisplay.length; i++ ) {
-                                    //console.log(changeElementsDisplay[i]);
-                                    changeElementsDisplay[i].style.display = "block"
+                                if ( selectorValueCompleteId === jobTypeElements[i]) {                                   
+                                    changeElementsDisplay.style.display = "block"
+                                    
+                                } else {
+                                    changeElementsDisplay.style.display = "none";
                                 }
-                            } else {
-                                console.log("There is no match on job type");
-                                //console.log("There is a match on job type");
-                                //console.log(jobTypeElementsClass[i]);
-                                let changeElementsDisplay = document.getElementsByClassName(jobTypeElementsClass[i]);
-                                //console.log(changeElementsDisplay);
-
-                                for ( i = 0; i < changeElementsDisplay.length; i++ ) {
-                                    //console.log(changeElementsDisplay[i]);
-                                    changeElementsDisplay[i].style.display = "none";
-                                    break;
-                                }
-                                
                             }
-                            
-                        }
-                        /*
-                        let getSelector = document.getElementById("job-type-selector");
-                        let getSelectorValue = getSelector.options[getSelector.selectedIndex].value;
-
-                        for (i = 0; i < jobTypeElements.length; i++ ) {
-                            
-                            let changeDisplayElement = document.getElementById(jobTypeElements[i]);
-                            console.log(changeDisplayElement);
-
-                            if ( getSelectorValue === jobTypeElements[i] ) {
-                                console.log(getSelectorValue + " " + jobTypeElements[i] + " There is a match");
-                                changeDisplayElement.style.display = "block"
-                            }
-                             else {
-                                console.log(getSelectorValue + " " + jobTypeElements[i] + " There is no match");
-                                changeDisplayElement.style.display = "none"
-                            }
-                        }
-                        */
+                        }  
                     }
 
                     // When change is noticed on select elements, call identify values
@@ -383,7 +341,9 @@
                 } if (currentURL.indexOf("jobs/") != -1) {
                     console.log("We are on update page");
 
-                    hideElements(showHideModality);
+                    // Calls hide elements function
+                    hideElements(modalityElements);
+                    hideElements(jobTypeElements);
 
                     if ( "{{ $job ?? '' }}" != null ) {
                         let showModality = "{{ $job ?? ''->modality ?? '' }}" + "ProductionInfo";
