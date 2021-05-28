@@ -372,7 +372,7 @@
                                 let att = document.createAttribute("selected");
                                 selectedOption.setAttributeNode(att);
                             } else {
-                                //Do Nothing
+                                // Do Nothing
                             }
                         }
 
@@ -386,9 +386,59 @@
                                 let att = document.createAttribute("selected");
                                 selectedOption.setAttributeNode(att);
                             } else {
-                                console.log("There is no match");
+                                // Do Nothing
                             }
                         }
+
+
+
+
+                        /* Show/Hide sections by modality */
+                        function showHideModalities() {
+
+                            // Get selector and its value
+                            getSelector = document.getElementById("modality-selector");
+                            let getSelectorValue = getSelector.options[getSelector.selectedIndex].value;
+
+                            for (i = 0; i < modalityElements.length; i++ ) {
+                                
+                                let changeDisplayElement = document.getElementById(modalityElements[i]);
+
+                                if ( getSelectorValue === modalityElements[i] ) {
+                                    changeDisplayElement.style.display = "block"
+                                }
+                                else {
+                                    changeDisplayElement.style.display = "none"
+                                }
+                            }
+                        }
+
+                        /* Show/Hide sections by job type */
+                        function showHideJobType() {
+                            
+                            // Get selector and its value
+                            getSelector = document.getElementById("job-type-selector");
+                            getSelectorValue = getSelector.options[getSelector.selectedIndex].value;
+                            
+                            for ( i = 0; i < modalityElements.length; i++ ) {
+                                let selectorValueCompleteId = modalityElements[i] + getSelectorValue;
+
+                                for ( i = 0; i < jobTypeElements.length; i++ ) {
+                                    let changeElementsDisplay = document.getElementById(jobTypeElements[i]);
+
+                                    if ( selectorValueCompleteId === jobTypeElements[i]) {                                   
+                                        changeElementsDisplay.style.display = "block"
+                                        
+                                    } else {
+                                        changeElementsDisplay.style.display = "none";
+                                    }
+                                }
+                            }  
+                        }
+
+                        // When change is noticed on select elements, call identify values
+                        document.getElementById("modality-selector").addEventListener("change", showHideModalities);
+                        document.getElementById("job-type-selector").addEventListener("change", showHideJobType);
 
 
                     } else {

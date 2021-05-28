@@ -8,7 +8,7 @@
     <div id="mobile-nav-content" class="collapse navbar-collapse">
         <ul class="navbar-nav">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Search Job</a>
+                <a class="nav-link" href="/">Home</a>
                     <span class="sr-only">(current)</span>
             </li>
             <li class="nav-item">
@@ -18,5 +18,18 @@
                 <a class="nav-link" href="/jobs">Edit Job</a>
             </li>
         </ul>
+    </div>
+    <div>
+    <form action="/search" method="POST" role="search">
+    {{ csrf_field() }}
+        <div class="input-group">
+            <input type="text" class="form-control" name="q"
+                placeholder="Search jobs"> <span class="input-group-btn">
+                <button type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+    </form>
     </div>
 </nav>

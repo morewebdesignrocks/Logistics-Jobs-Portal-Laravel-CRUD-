@@ -4,7 +4,8 @@
 
 <div class="card mt-5">
   <div class="card-header">
-    Search for Job
+    <h1>Welcome</h1>
   </div>
 </div>
+
 @endsection
