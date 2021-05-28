@@ -262,7 +262,7 @@
                 /* Array with elements to show/hide */
                 let modalityElements = ["CT-Scanner", "C-Arm", "X-Rays"];
                 let jobTypeElements = ["CT-ScannerWholesale", "CT-ScannerRetail", "CT-ScannerInventory"]
-                let jobTypeElementsClass = ["Retail", "Wholesale", "Inventory"];
+                //let jobTypeElementsClass = ["Retail", "Wholesale", "Inventory"];
 
                 /* Hide Elements by adding CSS style display:none */
                 function hideElements(hideElements) {                   
@@ -284,6 +284,7 @@
                     /* Show/Hide sections by modality */
                     function showHideModalities() {
 
+                        // Get selector and its value
                         let getSelector = document.getElementById("modality-selector");
                         let getSelectorValue = getSelector.options[getSelector.selectedIndex].value;
 
@@ -344,20 +345,51 @@
                     // Calls hide elements function
                     hideElements(modalityElements);
                     hideElements(jobTypeElements);
-
-                    if ( "{{ $job ?? '' }}" != null ) {
-                        let showModality = "{{ $job->modality ?? '' }}";
-                        let showJobType = "{{ $job->modality ?? '' }}" + "{{ $job->job_type ?? '' }}";
-                        let showElements = [showModality, showJobType];
-
-                        let modalityField = document.getElementById("modality-selector");
-                        console.log(modalityField);
                     
+                    // Shows fields according to stored Modality and Job Type selections in database
+                    if ( "{{ $job ?? '' }}" != null ) {
+                        let modality = "{{ $job->modality ?? '' }}",
+                            jobType = "{{ $job->job_type ?? '' }}",
+                            modalityJobType = "{{ $job->modality ?? '' }}" + jobType,
+                            showElements = [modality, modalityJobType],
+                            modalityField = document.getElementById("modality-selector");
+                    
+                        console.log(modality + ", " + jobType);
 
+                        // Show fields
                         for ( i = 0; i < showElements.length; i++ ) {
                             let applyShowType = document.getElementById(showElements[i]);
                             applyShowType.style.display = "block";
                         }
+
+                        // Get selector and its options
+                        let getSelector = document.getElementById("modality-selector");
+                        let getSelectorOptions = getSelector.options;
+
+                        for ( i = 0; i < getSelectorOptions.length; i++ ) {
+                            if ( getSelectorOptions[i].text === modality ) {
+                                let selectedOption = getSelectorOptions[i];
+                                let att = document.createAttribute("selected");
+                                selectedOption.setAttributeNode(att);
+                            } else {
+                                //Do Nothing
+                            }
+                        }
+
+                        getSelector = document.getElementById("job-type-selector");
+                        getSelectorOptions = getSelector.options;
+
+                        for ( i = 0; i < getSelectorOptions.length; i++ ) {
+                            console.log(getSelectorOptions[i].text);
+                            if ( getSelectorOptions[i].text === jobType ) {
+                                let selectedOption = getSelectorOptions[i];
+                                let att = document.createAttribute("selected");
+                                selectedOption.setAttributeNode(att);
+                            } else {
+                                console.log("There is no match");
+                            }
+                        }
+
 
                     } else {
                         //Do Nothing
