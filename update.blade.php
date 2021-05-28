@@ -27,8 +27,8 @@
                     </div>
                     <div class="form-group col-sm">
                         <label for="modality">Modality:</label>
-                        <select type="text" class="form-control" name="modality">
-                        <option value="">Select an option</option>
+                        <select type="text" id="modality-selector" class="form-control" name="modality">
+                            <option value="">Select an option</option>
                             <option value="CT-Scanner">CT-Scanner</option>
                             <option value="C-Arm">C-Arm</option>
                             <option value="X-Rays">X-Rays</option>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="form-group col-sm">
                         <label for="job_type">Job type:</label>
-                        <select type="text" class="form-control" name="job_type">
+                        <select type="text" id="job-type-selector" class="form-control" name="job_type">
                             <option value="">Select an option</option>
                             <option value="Wholesale">Wholesale</option>
                             <option value="Retail">Retail</option>

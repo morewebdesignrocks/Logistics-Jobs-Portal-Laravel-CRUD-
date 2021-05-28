@@ -350,6 +350,10 @@
                         let showJobType = "{{ $job->modality ?? '' }}" + "{{ $job->job_type ?? '' }}";
                         let showElements = [showModality, showJobType];
 
+                        let modalityField = document.getElementById("modality-selector");
+                        console.log(modalityField);
+                    
+
                         for ( i = 0; i < showElements.length; i++ ) {
                             let applyShowType = document.getElementById(showElements[i]);
                             applyShowType.style.display = "block";
