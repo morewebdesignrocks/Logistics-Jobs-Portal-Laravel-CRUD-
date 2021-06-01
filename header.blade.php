@@ -15,21 +15,8 @@
                 <a class="nav-link" href="/create">Add New Job</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/jobs">Edit Job</a>
+                <a class="nav-link" href="/jobs">Search Job</a>
             </li>
         </ul>
-    </div>
-    <div>
-    <form action="/search" method="POST" role="search">
-    {{ csrf_field() }}
-        <div class="input-group">
-            <input type="text" class="form-control" name="q"
-                placeholder="Search jobs"> <span class="input-group-btn">
-                <button type="submit" class="btn btn-default">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
-            </span>
-        </div>
-    </form>
     </div>
 </nav>

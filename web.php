@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
+use App\Models\Job;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,7 @@ Route::get('/', function () {
 Route::get('/create', function () {
     return view('create');
 });
-
+Route::get('/search', function () {
+    return view('search');
+});
 Route::resource('jobs', JobController::class);

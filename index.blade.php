@@ -12,28 +12,31 @@
           {{ session()->get('success') }}  
         </div>
       @endif
-      <table class="table table-sm">
-        <thead class="thead">
-          <tr>
-            <td scope="col"><b>Job Number:</b></td>
-            <td scope="col"><b>Job Type:</b></td>
-            <td scope="col"><b>Modality:</b></td>
-            <td scope="col"><b>Action</b></td>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach($job as $job)
-          <tr>
-            <th scope="row">{{$job->job_number}}</th>
-            <td>{{$job->job_type}}</td>
-            <td>{{$job->modality}}</td>
-            <td>
-                <a href="{{ route('jobs.edit', $job->id)}}" class="btn btn-success btn-sm">Edit</a>
-            </td>
-          </tr>
-          @endforeach
-        </tbody>
-      </table>
+      <!-- Jobs Listing -->
+      <section>
+        <table class="table table-sm">
+          <thead class="thead">
+            <tr>
+              <td scope="col"><b>Job Number:</b></td>
+              <td scope="col"><b>Job Type:</b></td>
+              <td scope="col"><b>Modality:</b></td>
+              <td scope="col"><b>Action</b></td>
+            </tr>
+          </thead>
+          <tbody>
+            @foreach($job as $job)
+            <tr>
+              <th scope="row">{{$job->job_number}}</th>
+              <td>{{$job->job_type}}</td>
+              <td>{{$job->modality}}</td>
+              <td>
+                  <a href="{{ route('jobs.edit', $job->id)}}" class="btn btn-success btn-sm">Edit</a>
+              </td>
+            </tr>
+            @endforeach
+          </tbody>
+        </table>
+      </section>
     </div>
   </div>
 </div>

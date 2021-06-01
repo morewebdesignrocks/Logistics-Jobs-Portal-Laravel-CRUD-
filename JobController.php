@@ -91,6 +91,27 @@ class JobController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function search(Request $request){
+        // Get the search value from the request
+        $search = $request->input('search');
+    
+        // Search in the title and body columns from the posts table
+        $job = Job::query()
+            ->where('job_number', 'LIKE', "%{$search}%")
+            ->get();
+    
+        // Return the search view with the results compacted
+        return view('search', compact('job'));
+        //return view('search', compact(12345));
+    }
+
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
