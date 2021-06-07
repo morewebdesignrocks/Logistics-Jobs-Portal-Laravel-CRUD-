@@ -133,9 +133,15 @@ class JobController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->validate([
-            'job_number' => 'required|numeric',
-            'job_type' => 'required|max:255',
-            'modality' => 'required|max:255',
+            'job_number' => 'numeric',
+            'job_type' => 'max:255',
+            'modality' => 'max:255',
+            'g_01' => 'string|max:255',
+            'g_02' => 'string|max:255',
+            'g_03' => 'numeric|nullable',
+            'g_04' => 'numeric|nullable',
+            'g_05' => 'string|max:255|nullable',
+            'g_06' => 'numeric|nullable',
         ]);
 
         Job::whereId($id)->update($data);

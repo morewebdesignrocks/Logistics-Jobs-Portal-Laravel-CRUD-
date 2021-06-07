@@ -352,9 +352,7 @@
                             jobType = "{{ $job->job_type ?? '' }}",
                             modalityJobType = "{{ $job->modality ?? '' }}" + jobType,
                             showElements = [modality, modalityJobType],
-                            modalityField = document.getElementById("modality-selector");
-                    
-                        console.log(modality + ", " + jobType);
+                            modalityField = document.getElementById("modality-selector");                 
 
                         // Show fields
                         for ( i = 0; i < showElements.length; i++ ) {
@@ -362,10 +360,11 @@
                             applyShowType.style.display = "block";
                         }
 
-                        // Get selector and its options
+                        // Get Modality selector and its options
                         let getSelector = document.getElementById("modality-selector");
                         let getSelectorOptions = getSelector.options;
 
+                        // Input selected options in database to Modality
                         for ( i = 0; i < getSelectorOptions.length; i++ ) {
                             if ( getSelectorOptions[i].text === modality ) {
                                 let selectedOption = getSelectorOptions[i];
@@ -376,11 +375,13 @@
                             }
                         }
 
+                        // Get Modality selector and its options
                         getSelector = document.getElementById("job-type-selector");
                         getSelectorOptions = getSelector.options;
 
+                        // Input selected options in database to Job Type
                         for ( i = 0; i < getSelectorOptions.length; i++ ) {
-                            console.log(getSelectorOptions[i].text);
+                            
                             if ( getSelectorOptions[i].text === jobType ) {
                                 let selectedOption = getSelectorOptions[i];
                                 let att = document.createAttribute("selected");
@@ -390,8 +391,38 @@
                             }
                         }
 
+                        // YES / NO radio selects 
+                        let equipmentInspection = { value:"{{ $job->g_05 ?? '' }}", id:"g_05" },
+                            unitBeingPainted = "{{ $job->r_ct_001 ?? '' }}",
+                            needsNewTube = "{{ $job->r_ct_002 ?? '' }}",
+                            providingGammaTechDrawings = "{{ $job->r_ct_005 ?? '' }}",
+                            customerChosenContractor = "{{ $job->r_ct_007 ?? '' }}",
+                            providingTrainingAndApplications = "{{ $job->r_ct_009 ?? '' }}",
+                            imagesDirectedToSpecificPACS = "{{ $job->r_ct_010 ?? '' }}",
+                            amberEmployeePerformInstallation = "{{ $job->rw_ct_002 ?? '' }}",
+                            amberDeinstallingScanner = "{{ $job->i_ct_001 ?? '' }}",
+                            riggersRequired = "{{ $job->i_ct_003 ?? '' }}",
+                            loadingdockIsDockhigh = "{{ $job->i_ct_004 ?? '' }}"
+                            iAmberEmployeePerformInstallation = "{{ $job->rw_ct_001 ?? '' }}",
+                            fieldsYesNoArray = [equipmentInspection];
 
+                        for ( i = 0; i < fieldsYesNoArray.length; i++ ) {
 
+                            if ( fieldsYesNoArray[i].value === "Yes" ) {
+                                let setYesNoIdSelector = fieldsYesNoArray[i].id + "_y"
+                                let selectedOption = document.getElementById(setYesNoIdSelector);
+                                let att = document.createAttribute("checked", "checked");
+                                selectedOption.setAttributeNode(att);
+
+                            } if ( fieldsYesNoArray[i].value === "No" ) {
+                                let setYesNoIdSelector = fieldsYesNoArray[i].id + "_n"
+                                let selectedOption = document.getElementById(setYesNoIdSelector);
+                                let att = document.createAttribute("checked", "checked");
+                                selectedOption.setAttributeNode(att);
+                            }
+
+                        }
+                        
 
                         /* Show/Hide sections by modality */
                         function showHideModalities() {

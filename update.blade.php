@@ -78,11 +78,11 @@
                     <label for="g_05">Is equipment going to be inspected prior to payment:</label>
                         <div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="g_05" id="g_05_y" value="{{ $job->g_05 }}">
+                                <input class="form-check-input" type="radio" name="g_05" id="g_05_y" value="Yes">
                                 <label class="form-check-label" for="g_05_y">Yes</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="g_05" id="g_05_n" value="{{ $job->g_05 }}">
+                                <input class="form-check-input" type="radio" name="g_05" id="g_05_n" value="No">
                                 <label class="form-check-label" for="g_05_n">No</label>
                             </div>
                         </div>
