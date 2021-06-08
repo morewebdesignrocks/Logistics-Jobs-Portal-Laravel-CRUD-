@@ -107,7 +107,7 @@
                                 <div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="r_ct_001" id="r_ct_001_y" value="Yes">
-                                        <label class="form-check-label" for="r_ct_001_01">Yes</label>
+                                        <label class="form-check-label" for="r_ct_001_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="r_ct_001" id="r_ct_001_n" value="No" >
@@ -242,7 +242,7 @@
                                 <div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="i_ct_001" id="i_ct_001_y" value="Yes">
-                                        <label class="form-check-label" for="i_ct_001_01">Yes</label>
+                                        <label class="form-check-label" for="i_ct_001_y">Yes</label>
                                     </div>
                                     <div class="form-check form-check-inline">
                                         <input class="form-check-input" type="radio" name="i_ct_001" id="i_ct_001_n" value="No" >

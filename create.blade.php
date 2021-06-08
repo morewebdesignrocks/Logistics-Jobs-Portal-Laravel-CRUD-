@@ -110,7 +110,7 @@
                                     <div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="r_ct_001" id="r_ct_001_y" value="Yes">
-                                            <label class="form-check-label" for="r_ct_001_01">Yes</label>
+                                            <label class="form-check-label" for="r_ct_001_y">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="r_ct_001" id="r_ct_001_n" value="No" >
@@ -179,7 +179,7 @@
                                     <label for="r_ct_009">Is Amber providing training and applications for the CT Scanner?</label>
                                     <div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="r_ct_009" id="r_ct_009_y" value="Yes">
+                                            <input class="form-check-input" type="radio" name="r_ct_009" id="r_ct_009_y" value="Yes" >
                                             <label class="form-check-label" for="r_ct_009_y">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
@@ -192,11 +192,11 @@
                                     <label for="r_ct_010">Will the images need to be directed to a specific PACS provider?</label>
                                     <div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_y" value="Yes" onchange="showHideYesNo(value, 'customer_it_person_contact_info')">
+                                            <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_y" value="Yes" >
                                             <label class="form-check-label" for="r_ct_010_y">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_n" value="No" onchange="showHideYesNo(value, 'customer_it_person_contact_info')">
+                                            <input class="form-check-input" type="radio" name="r_ct_010" id="r_ct_010_n" value="No" >
                                             <label class="form-check-label" for="r_ct_010_n">No</label>
                                         </div>
                                     </div>
@@ -245,7 +245,7 @@
                                     <div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="i_ct_001" id="i_ct_001_y" value="Yes">
-                                            <label class="form-check-label" for="i_ct_001_01">Yes</label>
+                                            <label class="form-check-label" for="i_ct_001_y">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="i_ct_001" id="i_ct_001_n" value="No" >

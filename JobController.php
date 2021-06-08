@@ -70,6 +70,7 @@ class JobController extends Controller
             'i_ct_007' => 'string|max:255|nullable',
             /* Mix CT questions */
             'rw_ct_001' => 'string|max:255|nullable',
+            'rw_ct_002' => 'string|max:255|nullable',
             'ri_ct_002' => 'string|max:255|nullable'
         ]);
 
@@ -142,6 +143,31 @@ class JobController extends Controller
             'g_04' => 'numeric|nullable',
             'g_05' => 'string|max:255|nullable',
             'g_06' => 'numeric|nullable',
+            /* Retail CT questions */
+            'r_ct_001' => 'string|max:255|nullable',
+            'r_ct_002' => 'string|max:255|nullable',
+            'r_ct_003' => 'string|max:255|nullable',
+            'r_ct_004' => 'string|max:255|nullable',
+            'r_ct_005' => 'string|max:255|nullable',
+            'r_ct_006' => 'string|max:255|nullable',
+            'r_ct_007' => 'string|max:255|nullable',
+            'r_ct_008' => 'string|max:255|nullable',
+            'r_ct_009' => 'string|max:255|nullable',
+            'r_ct_010' => 'string|max:255|nullable',
+            'r_ct_011' => 'string|max:255|nullable',
+            'r_ct_012' => 'numeric|nullable',
+            /* Inventory CT questions */
+            'i_ct_001' => 'string|max:255|nullable',
+            'i_ct_002' => 'string|max:255|nullable',
+            'i_ct_003' => 'string|max:255|nullable',
+            'i_ct_004' => 'string|max:255|nullable',
+            'i_ct_005' => 'string|max:255|nullable',
+            'i_ct_006' => 'string|max:255|nullable',
+            'i_ct_007' => 'string|max:255|nullable',
+            /* Mix CT questions */
+            'rw_ct_001' => 'string|max:255|nullable',
+            'rw_ct_002' => 'string|max:255|nullable',
+            'ri_ct_002' => 'string|max:255|nullable'
         ]);
 
         Job::whereId($id)->update($data);

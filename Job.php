@@ -41,6 +41,7 @@ class Job extends Model
         'i_ct_007',
         /* Mix CT questions */
         'rw_ct_001',
+        'rw_ct_002',
         'ri_ct_002'
     ];
 

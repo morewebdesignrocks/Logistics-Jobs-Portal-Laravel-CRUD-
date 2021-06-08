@@ -48,6 +48,7 @@ class CreateJobsTable extends Migration
             $table->string('i_ct_007')->nullable();
             /* Mix CT questions */
             $table->string('rw_ct_001')->nullable();
+            $table->string('rw_ct_002')->nullable();
             $table->string('ri_ct_002')->nullable();
         });
     }

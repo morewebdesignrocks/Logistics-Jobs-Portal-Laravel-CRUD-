@@ -393,18 +393,18 @@
 
                         // YES / NO radio selects 
                         let equipmentInspection = { value:"{{ $job->g_05 ?? '' }}", id:"g_05" },
-                            unitBeingPainted = "{{ $job->r_ct_001 ?? '' }}",
-                            needsNewTube = "{{ $job->r_ct_002 ?? '' }}",
-                            providingGammaTechDrawings = "{{ $job->r_ct_005 ?? '' }}",
-                            customerChosenContractor = "{{ $job->r_ct_007 ?? '' }}",
-                            providingTrainingAndApplications = "{{ $job->r_ct_009 ?? '' }}",
-                            imagesDirectedToSpecificPACS = "{{ $job->r_ct_010 ?? '' }}",
-                            amberEmployeePerformInstallation = "{{ $job->rw_ct_002 ?? '' }}",
-                            amberDeinstallingScanner = "{{ $job->i_ct_001 ?? '' }}",
-                            riggersRequired = "{{ $job->i_ct_003 ?? '' }}",
-                            loadingdockIsDockhigh = "{{ $job->i_ct_004 ?? '' }}"
-                            iAmberEmployeePerformInstallation = "{{ $job->rw_ct_001 ?? '' }}",
-                            fieldsYesNoArray = [equipmentInspection];
+                            unitBeingPainted = { value:"{{ $job->r_ct_001 ?? '' }}", id:"r_ct_001" },
+                            needsNewTube = { value:"{{ $job->r_ct_002 ?? '' }}", id:"r_ct_002" },
+                            providingGammaTechDrawings = { value:"{{ $job->r_ct_005 ?? '' }}", id:"r_ct_005" },
+                            customerChosenContractor = { value:"{{ $job->r_ct_007 ?? '' }}", id:"r_ct_007" },
+                            providingTrainingAndApplications = { value:"{{ $job->r_ct_009 ?? '' }}", id:"r_ct_009" },
+                            imagesDirectedToSpecificPACS = { value:"{{ $job->r_ct_010 ?? '' }}", id:"r_ct_010" },
+                            amberEmployeePerformInstallation = { value:"{{ $job->rw_ct_002 ?? '' }}", id:"rw_ct_002" },
+                            amberDeinstallingScanner = { value:"{{ $job->i_ct_001 ?? '' }}", id:"i_ct_001" },
+                            riggersRequired = { value:"{{ $job->i_ct_003 ?? '' }}", id:"i_ct_003" },
+                            loadingdockIsDockhigh = { value:"{{ $job->i_ct_004 ?? '' }}", id:"i_ct_004" },
+                            iAmberEmployeePerformInstallation = { value:"{{ $job->rw_ct_001 ?? '' }}", id:"rw_ct_001" },
+                            fieldsYesNoArray = [ equipmentInspection, unitBeingPainted, needsNewTube, providingGammaTechDrawings, customerChosenContractor, providingTrainingAndApplications, imagesDirectedToSpecificPACS, amberEmployeePerformInstallation, amberDeinstallingScanner, riggersRequired, loadingdockIsDockhigh, iAmberEmployeePerformInstallation ];
 
                         for ( i = 0; i < fieldsYesNoArray.length; i++ ) {
 
