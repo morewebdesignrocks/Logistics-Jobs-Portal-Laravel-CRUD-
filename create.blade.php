@@ -203,39 +203,166 @@
                                 </div>
                             </fieldset>
                             <section id="customer_it_person_contact_info">
-                                <label for="job_number"><u>Customer's IT person contact information:</u></label>
+                                <label for="r_ct_011"><u>Customer's IT person contact information:</u></label>
                                 <fieldset class="row">
                                     <div class="form-group col-sm">
-                                        <label for="r_ct_011">Complete name:</label>
+                                        <label for="r_ct_011">Complete name?</label>
                                         <input class="form-control" type="text" name="r_ct_011">
                                     </div>
                                     <div class="form-group col-sm">
-                                        <label for="r_ct_012">Phone number: <small>Format: 1234567890</small></label>
+                                        <label for="r_ct_012">Phone number? <small>(Format: 1234567890)</small></label>
                                         <input class="form-control" type="tel" name="r_ct_012" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
                                     </div>
                                 </fieldset>
                             </section>
                             <fieldset class="row">
                                 <div class="form-group col-sm">
-                                    <label for="rw_ct_002">Do you want an Amber employee to perform the mechanical installation?</label>
+                                    <label for="rw_ct_001">Is an Amber employee performing the mechanical installation?</label>
                                     <div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="rw_ct_002" id="rw_ct_002_y" value="Yes">
-                                            <label class="form-check-label" for="rw_ct_002_y">Yes</label>
+                                            <input class="form-check-input" type="radio" name="rw_ct_001" id="rw_ct_001_y" value="Yes">
+                                            <label class="form-check-label" for="rw_ct_001_y">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="rw_ct_002" id="rw_ct_002_n" value="No">
-                                            <label class="form-check-label" for="rw_ct_002_n">No</label>
+                                            <input class="form-check-input" type="radio" name="rw_ct_001" id="rw_ct_001_n" value="No">
+                                            <label class="form-check-label" for="rw_ct_001_n">No</label>
                                         </div>
                                     </div>
                                 </div>
                             </fieldset>
                             <fieldset class="row">
-                            <div class="form-group col-sm">
-                                    <label for="ri_ct_002">Any additional parts or notes for Amber's production needed?</label>
-                                    <input type="text" class="form-control" name="ri_ct_002">
-                                </div>
-                            <fieldset>
+                                <div class="form-group col-sm">
+                                    <label for="ri_ct_001">Any additional parts or notes for Amber's production needed?</label>
+                                    <input class="form-control" type="text" name="ri_ct_001">
+                                </div> 
+                            </fieldset>        
+                            <!-- CT Retail shipping section -->         
+                            <section>
+                                <hr>
+                                <h2>Shipping Information</h2>
+                                <section id="information-of-facility-to-be-shipped-to">
+                                    <label><u>Name and address of where the CT Scanner is going to be shipped to:</u></label>
+                                    <fieldset class="row">
+                                        <div class="form-group col-sm">
+                                            <label for="r_ct_013">Name of company or facility?</label>
+                                            <input class="form-control" type="text" name="r_ct_013">
+                                        </div>
+                                        <div class="form-group col-sm">
+                                            <label for="r_ct_014">Company or facility address?</label>
+                                            <input class="form-control" type="tel" name="r_ct_014">
+                                        </div>
+                                    </fieldset>
+                                </section>
+                                <section id="customer_person_contact_info">
+                                    <label><u>POC person information:</u></label>
+                                    <fieldset class="row">
+                                        <div class="form-group col-sm">
+                                            <label for="r_ct_015">Name of POC person?</label>
+                                            <input class="form-control" type="text" name="r_ct_015">
+                                        </div>
+                                        <div class="form-group col-sm">
+                                            <label for="r_ct_016">Phone number? <small>(Format: 1234567890)</small></label>
+                                            <input class="form-control" type="tel" name="r_ct_016" pattern="[0-9]{3}[0-9]{3}[0-9]{4}">
+                                        </div>
+                                        <div class="form-group col-sm">
+                                            <label for="r_ct_017">Email address?</label>
+                                            <input class="form-control" type="email" name="r_ct_017">
+                                        </div>
+                                    </fieldset>
+                                </section> 
+                                <fieldset class="row">
+                                    <div class="form-group col-sm">
+                                        <label for="r_ct_018">Desired delivery day:</label>
+                                        <input class="form-control" type="text" name="r_ct_018">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label for="r_ct_019">What floor will the CT Scanner by delivery to:</label>
+                                        <input class="form-control" type="tel" name="r_ct_019">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label for="r_ct_020">Does the Facility have a loading Dock?</label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_020" id="r_ct_020_y" value="Yes">
+                                                <label class="form-check-label" for="r_ct_020_y">Yes</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_020" id="r_ct_020_n" value="No">
+                                                <label class="form-check-label" for="r_ct_020_n">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset> 
+                            </section>
+                            <!-- CT Retail accounting section -->         
+                            <section>
+                                <hr>
+                                <h2>Accounting Information</h2>
+                                <fieldset class="row">
+                                    <div class="form-group col-sm">
+                                        <label for="r_ct_021">Is the CT Scanner being financed by a third party?</label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_021" id="r_ct_021_y" value="Yes">
+                                                <label class="form-check-label" for="r_ct_021_y">Yes</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_021" id="r_ct_021_n" value="No">
+                                                <label class="form-check-label" for="r_ct_021_n">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label for="r_ct_022">Has Amber received deposit moneis?</label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_022" id="r_ct_022_y" value="Yes">
+                                                <label class="form-check-label" for="r_ct_022_y">Yes</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_022" id="r_ct_022_n" value="No">
+                                                <label class="form-check-label" for="r_ct_022_n">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label for="r_ct_023">Is the balance due upon delivery and installation?</label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_023" id="r_ct_023_y" value="Yes">
+                                                <label class="form-check-label" for="r_ct_023_y">Yes</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_023" id="r_ct_023_n" value="No">
+                                                <label class="form-check-label" for="r_ct_023_n">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="row">
+                                    <div class="form-group col-sm">
+                                        <label for="r_ct_024">Does Amber need to send deposit monies to the seller in-order to secure the CT Scanner?</label>
+                                        <div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_024" id="r_ct_024_y" value="Yes">
+                                                <label class="form-check-label" for="r_ct_024_y">Yes</label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="r_ct_024" id="r_ct_024_n" value="No">
+                                                <label class="form-check-label" for="r_ct_024_n">No</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label for="r_ct_025">How much deposit moneis are required?</label>
+                                        <input class="form-control" type="tel" name="r_ct_025">
+                                    </div>
+                                    <div class="form-group col-sm">
+                                        <label for="r_ct_026">When does the deposit moneis need to arrive?</label>
+                                        <input class="form-control" type="tel" name="r_ct_026">
+                                    </div>
+                                </fieldset> 
+                            </section>
                         </section>
                         <!-- Form CT INVENTORY PRODUCTION INFO Section -->
                         <section id="CT-ScannerInventory" class="Inventory">
@@ -294,16 +421,16 @@
                             </fieldset>
                             <fieldset class="row">
                                 <div class="form-group col-sm">
-                                    <label for="ri_ct_002">Any additional parts or notes for Amber's production needed?</label>
-                                    <input class="form-control" type="text" name="ri_ct_002">
+                                    <label for="ri_ct_001">Any additional parts or notes for Amber's production needed?</label>
+                                    <input class="form-control" type="text" name="ri_ct_001">
                                 </div>   
                             </fieldset>
                         </section>
-                        <!-- Form CT INVENTORY PRODUCTION INFO Section -->
+                        <!-- Form CT WHOLESALE PRODUCTION INFO Section -->
                         <section id="CT-ScannerWholesale" class="Wholesale">
                             <fieldset class="row">
                                 <div class="form-group col-sm">
-                                    <label for="rw_ct_001">Do you want an Amber employee to perform the mechanical installation?</label>
+                                    <label for="rw_ct_001">Is an Amber employee performing the mechanical installation?</label>
                                     <div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="rw_ct_001" id="rw_ct_001_y" value="Yes">
@@ -318,11 +445,6 @@
                             </fieldset>
                         </section>
                     </section>
-                    <!-- Form C-Arm SHIPPING INFO Section -->
-                    <section class="shippingInfo">
-                        <hr>
-                        <h2>Shipping Information</h2>
-                    </section>
                 </section>
                 <!-- Form C-Arm PRODUCTION INFO Section -->
                 <section id="C-Arm">
@@ -330,7 +452,7 @@
                         <hr>
                         <h2>Production Information (C-Arm)</h2>
                     </section>
-                    <!-- Form   C-Arm SHIPPOING INFO Section -->
+                    <!-- Form C-Arm SHIPPING INFO Section -->
                     <section class="shippingInfo">
                         <hr>
                         <h2>Shipping Information</h2>
